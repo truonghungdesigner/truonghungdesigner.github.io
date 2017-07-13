@@ -1,0 +1,267 @@
+/*--TOP BAR --*/
+
+.sumpage-container {}
+
+.top-bar {
+    background-color: #151515;
+    padding: 2px;
+    font-size: 14px;
+    box-shadow: -2px 2px 14px -5px rgba(43, 76, 152, 1);
+}
+
+.top-bar i {
+    color: #fff;
+}
+
+.top-bar #date-area {
+    color: #fff;
+    font-weight: 500;
+    font-family: "Kurale";
+    letter-spacing: 3px;
+}
+
+.top-bar .social-icon a {
+    padding: 0px 5px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Kurale";
+    letter-spacing: 1px;
+}
+
+.top-bar .social-icon a .fa-facebook:hover {
+    color: #2B4C98;
+}
+
+.top-bar .social-icon a .fa-twitter:hover {
+    color: #00ACED;
+}
+
+.top-bar .social-icon a .fa-youtube-play:hover {
+    color: red;
+}
+
+.top-bar .social-icon a .fa-google-plus:hover {
+    color: #E74B37;
+}
+
+.top-bar .social-icon .icon-sign-in:hover,
+.top-bar .social-icon .icon-user-plus:hover {
+    color: #FE9121;
+}
+
+
+/*-- END OF TOP BAR --*/
+
+
+/*-- LOGO ADS --*/
+
+.logo-ads {
+    padding: 15px;
+}
+
+.logo-ads .logo-center {
+    padding: 15px;
+}
+
+.logo-ads .padding-style .box-shadow-ads {
+    box-shadow: 2px 3px 7px -1px rgba(0, 0, 0, 0.75);
+}
+
+
+/*-- END OF LOGO ADS --*/
+
+
+/*-- MAIN MENU --*/
+
+.main-menu {
+    background-color: #229AD6;
+    box-shadow: 2px 3px 7px -1px rgba(0, 0, 0, 0.75);
+}
+
+.main-menu .navbar-style-menu {
+    margin-bottom: 0px;
+    border: 0px;
+}
+
+.main-menu .navbar-style-menu .navbar-toggle-style {
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin: 12px 25px 10px 0px;
+}
+
+.main-menu .navbar-style-menu .navbar-toggle-style .icon-bar-style {
+    background-color: #fff;
+}
+
+.main-menu .collapse-style {
+    padding-left: 30px;
+}
+
+.main-menu .collapse-style .active,
+.main-menu .collapse-style .active a:hover {
+    background-color: #FE9121;
+}
+
+.main-menu .collapse-style a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: "Oswald";
+}
+
+.main-menu .collapse-style a:hover {
+    color: #f5f5f5;
+    background-color: #FE9121;
+}
+
+.main-menu .collapse-style a:focus {
+    color: #f5f5f5;
+    background-color: #FE9121;
+}
+
+.main-menu .collapse-style .navbar-nav .dropdown .dropdown-menu {
+    background-color: #FE9121;
+}
+
+.main-menu .collapse-style .navbar-nav .dropdown .dropdown-menu a {
+    padding: 10px 10px 10px 30px;
+}
+
+.main-menu .collapse-style .navbar-nav .dropdown .dropdown-menu a:hover {
+    background-color: #f5f5f5;
+    color: #FE9121;
+}
+
+.main-menu .collapse-style .style-navbar-form {
+    padding-right: 0px;
+}
+
+.style-navbar-form .fa-search:hover {
+    color: #fff;
+}
+
+.style-navbar-form .fa-search:focus {
+    color: #fff;
+}
+
+.style-navbar-form .style-navbar-form .style-text-form {
+    color: #FE9121;
+}
+
+.style-btn-search {
+    color: #fff;
+    border-color: rgb(250, 250, 250);
+}
+
+.input-group-btn:last-child>.btn,
+.input-group-btn:last-child>.btn-group {
+    background-color: #FE9121;
+}
+
+.style-logo-mobile {
+    padding-left: 15px;
+}
+
+
+/*-- ICON SEARCH --*/
+
+
+/*-- END OF MAIN MENU --*/
+
+
+/*-- STAR TIN HOT --*/
+
+.news-hot-area {
+    padding-top: 15px;
+}
+
+.news-hot-area .style-hot-news-top {
+    background-color: red;
+    font-weight: 600;
+    color: #fff;
+    padding: 4px;
+    font-family: "Oswald";
+    text-align: center;
+    letter-spacing: 4px;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 3px -2px 5px -1px rgba(107, 107, 107, 1);
+}
+
+.news-hot-area .style-hot-news-five a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.news-hot-area .style-hot-news-five i {
+    color: #FE9121;
+    font-size: 18px;
+}
+
+.news-hot-area .style-hot-news-five .post-news-01 {
+    color: #2264B0;
+}
+
+.news-hot-area .style-hot-news-five .post-news-02 {
+    color: #14A2B6;
+}
+
+.news-hot-area .style-hot-news-five .post-news-03 {
+    color: #29AC46;
+}
+
+.news-hot-area .style-hot-news-five .post-news-04 {
+    color: #8AC843;
+}
+
+.news-hot-area .style-hot-news-five .post-news-05 {
+    color: #EDE81A;
+}
+
+.nen {
+    background-color: green;
+}
+
+
+/*-- AREA FIVE NEWS TOP --*/
+
+
+/*post 03*/
+
+.news-two-big-images {
+    padding-top: 15px;
+}
+
+.three-post-area {
+    padding-top: 15px;
+}
+
+.news-two-big-images a {
+    text-decoration: none;
+    color: #282425;
+}
+
+.news-two-big-images {}
+
+.five-news-style .hover-big-images {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.a123456:hover .hover-big-images {
+    opacity: 0.7;
+}
+
+.news-two-big-images a:hover {
+    color: #FE9121;
+}
+
+
+/*---*/

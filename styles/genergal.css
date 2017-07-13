@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Tahoma:400,300,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Lobster&subset=vietnamese);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,500,600&subset=vietnamese);
+@import url(https://fonts.googleapis.com/css?family=Kurale);
+@media (min-width: 768px) {
+    .main-menu .collapse-style {
+        padding-left: 0px!important;
+    }
+}
+
+@media (min-width: 992px) {
+    .top-bar .media-style {
+        text-align: right!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar .media-style {
+        text-align: center!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .style-navbar-form {
+        margin-right: 0px!important;
+    }
+}
