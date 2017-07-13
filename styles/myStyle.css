@@ -4,7 +4,7 @@
 
 .top-bar {
     background-color: #151515;
-    padding: 2px;
+    padding: 4px;
     font-size: 14px;
     box-shadow: -2px 2px 14px -5px rgba(43, 76, 152, 1);
 }
@@ -189,11 +189,20 @@
     box-shadow: 3px -2px 5px -1px rgba(107, 107, 107, 1);
 }
 
+.news-hot-area .style-hot-news-five {
+    padding-left: 0px;
+}
+
 .news-hot-area .style-hot-news-five a {
     text-decoration: none;
     color: #4D4D4D;
     font-size: 15px;
-    font-style: italic;
+    font-family: "Tahoma";
+    font-weight: bold;
+}
+
+.news-hot-area .style-hot-news-five a:hover {
+    color: red;
 }
 
 .news-hot-area .style-hot-news-five i {
@@ -244,6 +253,9 @@
     color: #282425;
 }
 
+
+/*-- HOVER BIG IMG POST --*/
+
 .news-two-big-images {}
 
 .five-news-style .hover-big-images {
@@ -253,11 +265,18 @@
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px -1px 13px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px -1px 13px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px -1px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
-.a123456:hover .hover-big-images {
+.hover-images:hover .hover-big-images {
     opacity: 0.7;
 }
+
+
+/*--end of hover --*/
 
 .news-two-big-images a:hover {
     color: #FE9121;
@@ -265,3 +284,13 @@
 
 
 /*---*/
+
+
+/* STAR STYLE POST */
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 2px solid #eee;
+}

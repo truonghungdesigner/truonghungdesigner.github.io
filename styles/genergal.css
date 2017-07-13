@@ -26,3 +26,53 @@
         margin-right: 0px!important;
     }
 }
+
+@media (max-width: 768px) {
+    .media-images {
+        width: 384px;
+        height: 230ppx;
+    }
+}
+
+@media (min-width: 992px) {
+    .margin-top-post01 {
+        margin-top: 0px;
+    }
+    .padding-top-mini-post02 {
+        padding-top: 15px;
+    }
+    .dec-pots-n01 {
+        margin-bottom: 0px;
+    }
+    .set-padding-content {
+        padding: 0px;
+    }
+    .media-images {
+        width: 384px;
+        height: 230ppx;
+    }
+}
+
+
+/* STYLE HOVER IMG
+Cú pháp: 
+<a class="hover-images">
+    <img class="zhang-hover" />
+</a>
+*/
+
+.zhang-hover {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.hover-images:hover .zhang-hover {
+    opacity: 0.8;
+}
+
+
+/* end of zhang hover images */
