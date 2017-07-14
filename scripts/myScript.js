@@ -22,3 +22,5 @@ today = days[now.getDay()] + ", " +
     (fourdigits(now.getYear()));
 
 document.getElementById('date-area').innerHTML = today;
+
+/*face*/
