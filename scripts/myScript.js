@@ -23,4 +23,4 @@ today = days[now.getDay()] + ", " +
 
 document.getElementById('date-area').innerHTML = today;
 
-/*face*/
+/*map*/
