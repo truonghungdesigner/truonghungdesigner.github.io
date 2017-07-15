@@ -285,8 +285,9 @@
 .dec-post-n01 {}
 
 .title-post-h2 {
-    font: 30px/38px Utimes;
-    color: #29222;
+    font: 30px/38px 'Utimes';
+    color: #292222;
+    font-weight: bold;
 }
 
 .news-two-big-images {}
@@ -302,7 +303,7 @@
 }
 
 .title-post-h4 {
-    font: 500 19px/22px Utimes;
+    font: 600 19px/22px 'Utimes';
 }
 
 hr {
@@ -505,19 +506,76 @@ ul.social-network li {
 
 /*Style inline webdesign news post */
 
+.container-content-news {
+    padding-top: 15px;
+}
+
+.content-post-webdesign-area {}
+
+.panel-post-webdesign-area {
+    border: none;
+    background-color: #f4f4f4;
+}
+
 .container-content-news {}
 
 .content-post-webdesign-area {}
 
-.panel-post-webdesign-area {}
+.panel-post-webdesign-area .style-panel-heading {
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    background-color: #ff670f;
+    border-color: #ff670f;
+}
+
+.style-panel-heading {
+    padding: 5px 15px 5px 3px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.panel-body-html {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
 .panel-body-html a {
     text-decoration: none;
     color: #282425;
 }
 
+.panel-body-html a h2 {
+    font-size: 28px;
+}
+
+.panel-body-html span {
+    color: #C0C0C0;
+    font-size: 13px;
+}
+
+.panel-body-html p {
+    padding-top: 8px;
+}
+
 .panel-body-html a:hover {
     color: #FE9121;
+}
+
+.style-menu-mobile-webdesign {
+    margin: 0px;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: -3px;
+}
+
+.navbar-default-style .style-menu-mobile-webdesign:hover {
+    background: none;
+    color: #000000;
+    ;
 }
 
 .news-small-wedisign {
@@ -527,6 +585,10 @@ ul.social-network li {
 .news-small-wedisign a {
     text-decoration: none;
     color: #282425;
+}
+
+.news-small-wedisign .margin-top-small-post {
+    font-size: 19px;
 }
 
 .news-small-wedisign a:hover {
