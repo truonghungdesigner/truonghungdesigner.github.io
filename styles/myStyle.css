@@ -24,7 +24,7 @@
     padding: 0px 5px;
     text-decoration: none;
     color: #fff;
-    font-family: "Georgia";
+    font-family: "Alexander";
     letter-spacing: 1px;
 }
 
@@ -105,9 +105,9 @@
 .main-menu .collapse-style a {
     color: #fff;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
-    font-family: "Georgia";
+    font-family: "Alexander";
 }
 
 .main-menu .collapse-style a:hover {
@@ -181,7 +181,7 @@
     font-weight: 600;
     color: #fff;
     padding: 4px;
-    font-family: "Georgia";
+    font-family: "Alexander";
     text-align: center;
     letter-spacing: 2px;
 }
@@ -294,7 +294,7 @@
 .dec-post-n01 {}
 
 .title-post-h2 {
-    font: 30px/38px Georgia;
+    font: 30px/38px Alexander;
     color: #29222;
 }
 
@@ -311,7 +311,7 @@
 }
 
 .title-post-h4 {
-    font: 500 19px/22px Georgia;
+    font: 500 19px/22px Alexander;
 }
 
 hr {

@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Georgia;
-    src: url(../fonts/fonts/Georgia.ttf) format('truetype');
+    font-family: 'Alexander';
+    src: url(../fonts/fonts/Alexander.ttf) format('truetype');
 }
 
 @font-face {
@@ -17,8 +17,8 @@ body {
     font-family: 'Tahoma';
 }
 
-.Georgia-font {
-    font-family: 'Georgia';
+.Alexander-font {
+    font-family: 'Alexander';
 }
 
 @media (min-width: 768px) {
