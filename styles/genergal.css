@@ -1,16 +1,24 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
-@import url(https://fonts.googleapis.com/css?family=Tahoma:400,300,500,600,700,800);
-@import url(https://fonts.googleapis.com/css?family=Lobster&subset=vietnamese);
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,500,600&subset=vietnamese);
-@import url(https://fonts.googleapis.com/css?family=Kurale);
 @font-face {
     font-family: Georgia;
-    src: url(../fonts/fonts/Georgia.ttf);
+    src: url(../fonts/fonts/Georgia.ttf) format('truetype');
 }
 
 @font-face {
     font-family: Tahoma;
-    src: url(../fonts/fonts/Tahoma.ttf);
+    src: url(../fonts/fonts/Tahoma.ttf) format('truetype');
+}
+
+body {
+    font-family: Tahoma;
+    text-align: justify;
+}
+
+.Tahoma-font {
+    font-family: 'Tahoma';
+}
+
+.Georgia-font {
+    font-family: 'Georgia';
 }
 
 @media (min-width: 768px) {
@@ -151,11 +159,14 @@ h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    line-height: 16px;
+    line-height: 18px;
+    font-size: 14px;
+    font-family: 'Tahoma';
+    color: #666
     /* fallback */
-    max-height: 32px;
+    max-height: 60px;
     /* fallback */
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     /* number of lines to show */
     -webkit-box-orient: vertical;
 }

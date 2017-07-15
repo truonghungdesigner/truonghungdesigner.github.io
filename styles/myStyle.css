@@ -16,7 +16,7 @@
 .top-bar #date-area {
     color: #fff;
     font-weight: 500;
-    font-family: "Kurale";
+    font-family: "Tahoma";
     letter-spacing: 3px;
 }
 
@@ -24,7 +24,7 @@
     padding: 0px 5px;
     text-decoration: none;
     color: #fff;
-    font-family: "Kurale";
+    font-family: "Georgia";
     letter-spacing: 1px;
 }
 
@@ -105,10 +105,9 @@
 .main-menu .collapse-style a {
     color: #fff;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
-    letter-spacing: 1px;
-    font-family: "Oswald";
+    font-family: "Georgia";
 }
 
 .main-menu .collapse-style a:hover {
@@ -182,10 +181,9 @@
     font-weight: 600;
     color: #fff;
     padding: 4px;
-    font-family: "Oswald";
+    font-family: "Georgia";
     text-align: center;
-    letter-spacing: 4px;
-    border-radius: 0px 50px 5px 0px;
+    letter-spacing: 2px;
 }
 
 .news-hot-area .style-hot-news-five {
@@ -308,8 +306,7 @@
 
 .dec-post-n01 p {
     margin: 0 0 5px;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 15px;
     color: #666;
 }
 
@@ -583,7 +580,7 @@ footer {
 .footerleft p {
     color: #fff;
     font-size: 14px !important;
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Tahoma';
     margin-bottom: 15px;
     letter-spacing: 1px;
     text-align: justify;
