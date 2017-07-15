@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Alexander';
-    src: url(../fonts/fonts/Alexander.ttf) format('truetype');
+    font-family: 'Utimes';
+    src: url(../fonts/fonts/Utimes.ttf) format('truetype');
 }
 
 @font-face {
@@ -17,8 +17,8 @@ body {
     font-family: 'Tahoma';
 }
 
-.Alexander-font {
-    font-family: 'Alexander';
+.Utimes-font {
+    font-family: 'Utimes';
 }
 
 @media (min-width: 768px) {

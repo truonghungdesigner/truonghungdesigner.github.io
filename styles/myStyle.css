@@ -6,7 +6,6 @@
     background-color: #151515;
     padding: 4px;
     font-size: 14px;
-    box-shadow: -1px 1px 14px -5px rgba(43, 76, 152, 1);
 }
 
 .top-bar i {
@@ -24,7 +23,7 @@
     padding: 0px 5px;
     text-decoration: none;
     color: #fff;
-    font-family: "Alexander";
+    font-family: "Utimes";
     letter-spacing: 1px;
 }
 
@@ -63,10 +62,6 @@
     padding: 15px;
 }
 
-.logo-ads .padding-style .box-shadow-ads {
-    box-shadow: 1px 1px 3px -2px rgba(0, 0, 0, 0.75);
-}
-
 
 /*-- END OF LOGO ADS --*/
 
@@ -75,7 +70,6 @@
 
 .main-menu {
     background-color: #229AD6;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
 }
 
 .main-menu .navbar-style-menu {
@@ -107,7 +101,7 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
-    font-family: "Alexander";
+    font-family: "Utimes";
 }
 
 .main-menu .collapse-style a:hover {
@@ -181,7 +175,7 @@
     font-weight: 600;
     color: #fff;
     padding: 4px;
-    font-family: "Alexander";
+    font-family: "Utimes";
     text-align: center;
     letter-spacing: 2px;
 }
@@ -263,9 +257,6 @@
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
-    -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
 }
 
 .hover-images:hover .hover-big-images {
@@ -294,7 +285,7 @@
 .dec-post-n01 {}
 
 .title-post-h2 {
-    font: 30px/38px Alexander;
+    font: 30px/38px Utimes;
     color: #29222;
 }
 
@@ -311,7 +302,7 @@
 }
 
 .title-post-h4 {
-    font: 500 19px/22px Alexander;
+    font: 500 19px/22px Utimes;
 }
 
 hr {
@@ -332,9 +323,6 @@ hr {
     position: relative;
     text-align: center;
     cursor: default;
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .zhang-hover-eleven .overlay {
@@ -561,9 +549,6 @@ footer {
     background-color: #229AD6;
     min-height: 350px;
     font-family: 'Tahoma', sans-serif;
-    -webkit-box-shadow: 3px -2px 7px -1px rgba(128, 128, 128, 1);
-    -moz-box-shadow: 3px -2px 7px -1px rgba(128, 128, 128, 1);
-    box-shadow: 3px -2px 7px -1px rgba(128, 128, 128, 1);
 }
 
 .footerleft {
