@@ -3,6 +3,16 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster&subset=vietnamese);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,500,600&subset=vietnamese);
 @import url(https://fonts.googleapis.com/css?family=Kurale);
+@font-face {
+    font-family: Georgia;
+    src: url(../fonts/fonts/Georgia.ttf);
+}
+
+@font-face {
+    font-family: Tahoma;
+    src: url(../fonts/fonts/Tahoma.ttf);
+}
+
 @media (min-width: 768px) {
     .main-menu .collapse-style {
         padding-left: 0px!important;
@@ -132,4 +142,32 @@ Cú pháp:
 h2,
 h3 {
     margin-top: 15px;
+}
+
+
+/*MAXIMUM LINE*/
+
+.line-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    /* fallback */
+    max-height: 32px;
+    /* fallback */
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.text-1 {
+    text-align: right;
+}
+
+.text-2 {
+    text-align: center;
+}
+
+.text-3 {
+    text-align: justify;
 }
