@@ -468,39 +468,28 @@ ul.social-network li {
     position: relative;
     bottom: 30px;
     clear: both;
-    border-bottom: 1px solid transparent;
+    padding-top: 6px;
 }
 
 .panel-tabs>li {
     float: left;
-    margin-bottom: -1px;
 }
 
 .panel-tabs>li>a {
-    margin-right: 2px;
-    margin-top: 4px;
+    margin-right: 0px;
+    margin-top: 0px;
     line-height: .85;
-    border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
-    color: #ffffff;
+    color: #fff;
 }
 
 .panel-tabs>li>a:hover {
-    border-color: transparent;
-    color: #ffffff;
-    background-color: transparent;
+    color: #282425;
 }
 
 .panel-tabs>li.active>a,
 .panel-tabs>li.active>a:hover,
 .panel-tabs>li.active>a:focus {
     color: #fff;
-    cursor: default;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, .23);
-    border-bottom-color: transparent;
 }
 
 
@@ -524,15 +513,35 @@ ul.social-network li {
 .panel-post-webdesign-area .style-panel-heading {
     color: #fff;
     font-size: 13px;
-    letter-spacing: 2px;
-    background-color: #ff670f;
-    border-color: #ff670f;
+    background-color: #229AD6;
+    border-color: #229AD6;
+}
+
+.panel-primary>.style-panel-color {
+    background-color: #FE9121;
+    border-color: #FE9121;
+    border: none;
+}
+
+.style-panel-color {
+    padding: 10px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    font-size: 13px;
+}
+
+.content-post-seo-area,
+.padding-top-seo-post-area {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .style-panel-heading {
-    padding: 5px 15px 5px 3px;
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
+    padding: 9px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
@@ -540,6 +549,11 @@ ul.social-network li {
 .panel-body-html {
     padding-top: 0px;
     padding-bottom: 0px;
+    border-bottom: 9px solid #229AD6;
+}
+
+.panel-body-seo {
+    border-bottom: 9px solid #FE9121;
 }
 
 .panel-body-html a {
@@ -575,7 +589,6 @@ ul.social-network li {
 .navbar-default-style .style-menu-mobile-webdesign:hover {
     background: none;
     color: #000000;
-    ;
 }
 
 .news-small-wedisign {
@@ -602,6 +615,13 @@ ul.social-network li {
 
 .margin-top-small-post {
     margin-top: 0px;
+}
+
+
+/*post seo big 2 */
+
+.padding-top-seo-post-area {
+    padding-top: 0px;
 }
 
 
