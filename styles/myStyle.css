@@ -642,7 +642,7 @@ ul.social-network li {
     background-color: #FCFBFA;
     top: 28%;
     left: -3px;
-    min-width: 0px;
+    min-width: 115px;
     font-size: 13px;
     border-radius: 0px;
     border: 0px;
@@ -669,6 +669,42 @@ ul.social-network li {
 .nav .open>a:hover {
     background-color: transparent;
     border-color: transparent;
+}
+
+
+/* SIDAR */
+
+.avatar-area {
+    text-align: center;
+}
+
+.sibar-area .avatar-area img {
+    border-radius: 100%;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.style-text-latest-articel-video,
+.style-text-latest-articel {
+    color: #fff;
+    width: 100%;
+    background-color: #229AD6;
+    padding: 5px;
+}
+
+.style-text-latest-articel {
+    margin-top: 10px;
+}
+
+
+/*video area */
+
+.nopadding {
+    padding: 2px !important;
+    margin: 0 !important;
+    outline: 2px solid #333;
+    background: #333;
 }
 
 
