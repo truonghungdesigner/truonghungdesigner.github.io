@@ -1,0 +1,53 @@
+.breadcrumb-area .style-breadcrumb {
+    padding: 8px 0px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.breadcrumb-area .style-breadcrumb .active {
+    color: red;
+}
+
+.breadcrumb-area .style-breadcrumb a {
+    text-decoration: none;
+    color: #666;
+}
+
+.content-post-webdesign-area .style-post a:hover,
+.breadcrumb-area .style-breadcrumb a:hover,
+.media-post05 a:hover {
+    color: #FE9121;
+}
+
+.media-post05 a,
+.content-post-webdesign-area .style-post a {
+    text-decoration: none;
+    color: #282425;
+}
+
+
+/*style-pagination*/
+
+.page-nation-area {
+    text-align: center;
+}
+
+.style-pagination {
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.page-nation-area .style-pagination .active>span {
+    color: #fff;
+    background-color: #FE9121;
+    border-color: #FE9121;
+}
+
+.page-nation-area .style-pagination li a:hover {
+    background-color: #FE9121;
+    color: #f5f5f5;
+}

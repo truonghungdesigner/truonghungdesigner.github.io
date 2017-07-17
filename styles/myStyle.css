@@ -237,7 +237,7 @@
 }
 
 .three-post-area {
-    padding-top: 15px;
+    padding-top: 35px;
 }
 
 .news-two-big-images a {
@@ -691,10 +691,11 @@ ul.social-network li {
     width: 100%;
     background-color: #229AD6;
     padding: 5px;
+    text-align: center;
 }
 
 .style-text-latest-articel {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 
@@ -714,6 +715,11 @@ ul.social-network li {
     padding-bottom: 20px;
 }
 
+.text-center-ads-bottom {
+    margin: 0 auto;
+    display: block;
+}
+
 
 /* footer style */
 
@@ -721,6 +727,11 @@ footer {
     background-color: #229AD6;
     min-height: 350px;
     font-family: 'Tahoma', sans-serif;
+}
+
+.text-center-logo-bottom {
+    margin: 0 auto;
+    padding-bottom: 15px;
 }
 
 .footerleft {
