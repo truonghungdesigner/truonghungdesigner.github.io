@@ -30,7 +30,7 @@
             <div class="col-md-2 col-sm-1 hidden-xs colAdmin-style valign-top" id="side-menu">
                 <h2 class="hidden-sm hidden-xs">Navigation</h2>
                 <ul>
-                    <li class="link active">
+                    <li class="link">
                         <a href="admin.html">
                             <span class="fa fa-th" aria-hidden="true"></span>
                             <span class="hidden-sm hidden-xs">Bảng tin</span>
@@ -64,7 +64,7 @@
                         </ul>
                     </li>
                     <!-- ADMIN CATEGORIES -->
-                    <li class="link">
+                    <li class="link  active">
                         <a href="#collapse-categories" data-toggle="collapse" aria-controls="collapse-categories">
                             <span class="fa fa-tags" aria-hidden="true"></span>
                             <span class="hidden-sm hidden-xs">Chuyên mục</span>
@@ -152,8 +152,112 @@
                         <!--End of Login admin -->
                     </header>
                 </div>
-                <h1 style="font-size: 50px;"> HELLO! ĐANG LÀM TRANG NÀY NHÉ</h1>
-                <p style="font-size: 30px; color: red;"> Mới hoàn thành trang: BÀI VIẾT VÀ CHUYÊN MỤC nhé !!!!!!!!</p>
+
+                <!-- START NEW CATEGORIES -->
+                <div class="row">
+                    <div class="col-md-4 categories-left">
+                        <div class="admin-content-con">
+                            <header>
+                                <h5>Thêm chuyên mục mới</h5>
+                            </header>
+
+                            <form>
+                                <div class="form-group">
+                                    <label>Tên chuyên mục</label>
+                                    <p>
+                                        <textarea rows="3" class="form-control" placeholder="thể thao, truyện cười, ngôi sao.v.v."></textarea>
+                                    </p>
+
+                                    <label>Mô tả</label>
+                                    <p>
+                                        <textarea rows="3" class="form-control" placeholder="Mô tả ngắn dưới 165 ký tự..."></textarea>
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-large btn-block btn-primary">Thêm</button>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="div col-md-8 categories-right">
+                        <header>
+                            <h5>Chuyên Mục</h5>
+                        </header>
+
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Tên</th>
+                                    <th>Tình trạng</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Chỉnh sửa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HTML5</td>
+                                    <td><span class="label label-success">Đang họat động</span></td>
+                                    <td>02/07/2017</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-warning">Sửa</button>
+                                        <button type="button" class="btn btn-xs btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>CSS3</td>
+                                    <td><span class="label label-success">Đang họat động</span></td>
+                                    <td>02/07/2017</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-warning">Sửa</button>
+                                        <button type="button" class="btn btn-xs btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bootstrap</td>
+                                    <td><span class="label label-success">Đang họat động</span></td>
+                                    <td>02/07/2017</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-warning">Sửa</button>
+                                        <button type="button" class="btn btn-xs btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>JavaScript</td>
+                                    <td><span class="label label-success">Đang họat động</span></td>
+                                    <td>02/07/2017</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-warning">Sửa</button>
+                                        <button type="button" class="btn btn-xs btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>jQuery</td>
+                                    <td><span class="label label-success">Đang họat động</span></td>
+                                    <td>02/07/2017</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-warning">Sửa</button>
+                                        <button type="button" class="btn btn-xs btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>AngularJS 1</td>
+                                    <td><span class="label label-success">Đang họat động</span></td>
+                                    <td>02/07/2017</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-warning">Sửa</button>
+                                        <button type="button" class="btn btn-xs btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
                 <!-- end of row search and wellcom -->
                 <div class="row">
                     <footer id="admin-footer" class="clearnfix">

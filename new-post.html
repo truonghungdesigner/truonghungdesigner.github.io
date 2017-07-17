@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="library/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="styles/newPost.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
             <div class="col-md-2 col-sm-1 hidden-xs colAdmin-style valign-top" id="side-menu">
                 <h2 class="hidden-sm hidden-xs">Navigation</h2>
                 <ul>
-                    <li class="link active">
+                    <li class="link">
                         <a href="admin.html">
                             <span class="fa fa-th" aria-hidden="true"></span>
                             <span class="hidden-sm hidden-xs">Bảng tin</span>
@@ -49,7 +50,7 @@
                         </ul>
                     </li>
                     <!-- ADMIN POST -->
-                    <li class="link">
+                    <li class="link active">
                         <a href="#collapse-post" data-toggle="collapse" aria-controls="collapse-post">
                             <span class="fa fa-list-alt" aria-hidden="true"></span>
                             <span class="hidden-sm hidden-xs">Bài viết</span>
@@ -152,8 +153,50 @@
                         <!--End of Login admin -->
                     </header>
                 </div>
-                <h1 style="font-size: 50px;"> HELLO! ĐANG LÀM TRANG NÀY NHÉ</h1>
-                <p style="font-size: 30px; color: red;"> Mới hoàn thành trang: BÀI VIẾT VÀ CHUYÊN MỤC nhé !!!!!!!!</p>
+                <!-- CREATE NEW POST -->
+                <div id="content-newPost">
+                    <header>
+                        <h2 class="general-post">Thêm bài viết mới</h2>
+                    </header>
+                    <div class="content-inner">
+                        <div class="form-newPost">
+                            <form>
+                                <!--FORM TIÊU ĐỀ -->
+                                <div class="form-group">
+                                    <label class="sr-only">Tiêu đề bài viết</label>
+                                    <input type="text" class="form-control" id="title-newPost" placeholder="Nhập tiêu đề tại đây">
+                                </div>
+                                <!--FORM CATEGORIES -->
+                                <div class="form-group">
+                                    <label class="sr-only">Chuyên mục</label>
+                                    <select data-placeholder="Select categories" multiple name="categories" class="form-control">
+                                        <option>HTML5</option>
+                                        <option>CSS3</option>
+                                        <option>Bootstrap</option>
+                                        <option>JavaScript</option>
+                                        <option>jQuery</option>
+                                        <option>AngularJS 1</option>
+                                    </select>
+                                </div>
+
+                                <!--FORM SỌAN THẢO -->
+                                <div class="form-group">
+                                    <label class="sr-only">Soạn thảo</label>
+                                    <textarea class="form-control" placeholder="Soạn thảo bài viết" name="newPost-area"></textarea>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Đồng ý xuất bản bài viết công khai và lưu lại
+                                    </label>
+                                </div>
+                                <div class="clearfix">
+                                    <button type="submit" class="btn btn-primary pull-right">Đăng bài viết</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- end of row search and wellcom -->
                 <div class="row">
                     <footer id="admin-footer" class="clearnfix">

@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="library/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="styles/newPost.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
             <div class="col-md-2 col-sm-1 hidden-xs colAdmin-style valign-top" id="side-menu">
                 <h2 class="hidden-sm hidden-xs">Navigation</h2>
                 <ul>
-                    <li class="link active">
+                    <li class="link">
                         <a href="admin.html">
                             <span class="fa fa-th" aria-hidden="true"></span>
                             <span class="hidden-sm hidden-xs">Bảng tin</span>
@@ -49,7 +50,7 @@
                         </ul>
                     </li>
                     <!-- ADMIN POST -->
-                    <li class="link">
+                    <li class="link active">
                         <a href="#collapse-post" data-toggle="collapse" aria-controls="collapse-post">
                             <span class="fa fa-list-alt" aria-hidden="true"></span>
                             <span class="hidden-sm hidden-xs">Bài viết</span>
@@ -152,8 +153,118 @@
                         <!--End of Login admin -->
                     </header>
                 </div>
-                <h1 style="font-size: 50px;"> HELLO! ĐANG LÀM TRANG NÀY NHÉ</h1>
-                <p style="font-size: 30px; color: red;"> Mới hoàn thành trang: BÀI VIẾT VÀ CHUYÊN MỤC nhé !!!!!!!!</p>
+                <!-- CREATE NEW POST -->
+                <div id="content-newPost">
+                    <header class="clearfix">
+                        <h2 class="general-post">Tất cả bài viết</h2>
+                        <button type="button" class="btn btn-xs btn-primary pull-right">Viết bài mới</button>
+                    </header>
+                    <div class="content-inner">
+                        <div class="row serach-row-style">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control search-style" id="serach" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-primary go-style">Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row allPost-row">
+                            <div class="col-md-1 status-padding">
+                                <span class="label label-success label-sm">Đã đăng</span>
+                            </div>
+
+                            <div class="col-md-8">
+                                <p>Cái chết đau đớn nhất theo kiểu 1 chú dán tội nghiệp.</p>
+                                <small class="title-allPost">Ngày đăng: 30/06/2017</small>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="post-action">
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-folder-open" aria-hidden="true"> Xem</span>
+                                    </a>
+
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-pencil" aria-hidden="true"> Sửa</span>
+                                    </a>
+
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-remove" aria-hidden="true"> Xóa</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row allPost-row">
+                            <div class="col-md-1 status-padding">
+                                <span class="label label-success label-sm">Đã đăng</span>
+                            </div>
+
+                            <div class="col-md-8">
+                                <p>Cái chết đau đớn nhất theo kiểu 1 chú dán tội nghiệp.</p>
+                                <small class="title-allPost">Ngày đăng: 30/06/2017</small>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="post-action">
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-folder-open" aria-hidden="true"> Xem</span>
+                                    </a>
+
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-pencil" aria-hidden="true"> Sửa</span>
+                                    </a>
+
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-remove" aria-hidden="true"> Xóa</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row allPost-row">
+                            <div class="col-md-1 status-padding">
+                                <span class="label label-warning label-sm">Bản Nháp</span>
+                            </div>
+
+                            <div class="col-md-8">
+                                <p>Cái chết đau đớn nhất theo kiểu 1 chú dán tội nghiệp.</p>
+                                <small class="title-allPost">Ngày đăng: 30/06/2017</small>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="post-action">
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-folder-open" aria-hidden="true"> Xem</span>
+                                    </a>
+
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-pencil" aria-hidden="true"> Sửa</span>
+                                    </a>
+
+                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <span class="fa fa-remove" aria-hidden="true"> Xóa</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- end of row search and wellcom -->
                 <div class="row">
                     <footer id="admin-footer" class="clearnfix">
