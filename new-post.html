@@ -21,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="styles/resetStyle.css">
     <link rel="stylesheet" type="text/css" href="library/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="library/chosen_v1.7.0/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="library/summernote-master/summernote.css">
     <link rel="stylesheet" type="text/css" href="styles/style-admin.css">
     <link rel="stylesheet" type="text/css" href="styles/newPost.css">
 </head>
@@ -169,20 +171,21 @@
                                 <!--FORM CATEGORIES -->
                                 <div class="form-group">
                                     <label class="sr-only">Chuyên mục</label>
-                                    <select data-placeholder="Select categories" multiple name="categories" class="form-control">
+                                    <select data-placeholder="Select categories" multiple name="categories" class="form-control chosen-select">
+                                        <option></option>
                                         <option>HTML5</option>
                                         <option>CSS3</option>
                                         <option>Bootstrap</option>
                                         <option>JavaScript</option>
                                         <option>jQuery</option>
                                         <option>AngularJS 1</option>
-                                    </select>
+                                   
                                 </div>
 
                                 <!--FORM SỌAN THẢO -->
                                 <div class="form-group">
                                     <label class="sr-only">Soạn thảo</label>
-                                    <textarea class="form-control" placeholder="Soạn thảo bài viết" name="newPost-area"></textarea>
+                                    <textarea class="form-control summernote" placeholder="Soạn thảo bài viết" name="newPost-area"></textarea>
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -214,6 +217,8 @@
 <script type="text/javascript" src="library/jQuery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="library/angularJS/angular.min.js"></script>
 <script type="text/javascript" src="library/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="library/chosen_v1.7.0/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="library/summernote-master/summernote.min.js"></script>
 <script type="text/javascript" src="scripts/myadmin.js"></script>
 
 </html>

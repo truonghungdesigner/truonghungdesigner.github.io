@@ -1,6 +1,6 @@
 html,
 body {
-    background-color: #f3f3f4;
+    background-color: #fff;
     color: #676a6c;
     height: 100%;
 }
@@ -287,7 +287,7 @@ body {
     border: 1px solid #1cc394;
 }
 
-.go-style: {
+.go-style {
     height: 31px;
 }
 
