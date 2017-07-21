@@ -2,3 +2,15 @@
     background-color: #eeeeee;
     padding: 20px;
 }
+
+.note-editable {
+    background-color: #ffffff;
+}
+
+.chosen-container,
+.chosen-container-multi {
+    width: 100%!important;
+}
+
+
+/*#14  --- 14:00*/
