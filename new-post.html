@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" ng-app="textAngularTest">
 
 <head>
     <meta charset="UTF-8">
@@ -162,6 +162,7 @@
                     </header>
                     <div class="content-inner">
                         <div class="form-newPost">
+
                             <form>
                                 <!--FORM TIÊU ĐỀ -->
                                 <div class="form-group">
@@ -179,15 +180,17 @@
                                         <option>JavaScript</option>
                                         <option>jQuery</option>
                                         <option>AngularJS 1</option>
-                                   
+                                    </select>
                                 </div>
 
                                 <!--FORM SỌAN THẢO -->
-                                <div ng-app="textAngularTest" ng-controller="wysiwygeditor" class="form-group container app" >
+                                <div class="form-group">
                                     <label class="sr-only">Soạn thảo</label>
-                                    <text-angular ng-model="htmlVariable"></text-angular>
-                                    
+                                    <div text-angular ng-model="htmlVariable"></div>
+
+
                                 </div>
+
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox"> Đồng ý xuất bản bài viết công khai và lưu lại
@@ -197,6 +200,7 @@
                                     <button type="submit" class="btn btn-primary pull-right">Đăng bài viết</button>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
@@ -215,13 +219,16 @@
     </div>
 </body>
 <!-- Text/JavaScript -->
-<script type="text/javascript" src="library/jQuery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="library/angularJS/angular.min.js"></script>
-<script type="text/javascript" src="library/textAngular/dist/textAngular-rangy.min.js"></script>
-<script type="text/javascript" src="library/textAngular/dist/textAngular-sanitize.min.js"></script>
-<script type="text/javascript" src="library/textAngular/dist/textAngular.min.js"></script>
-<script type="text/javascript" src="library/bootstrap/bootstrap.min.js"></script>
-<script type="text/javascript" src="library/chosen_v1.7.0/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="scripts/myadmin.js"></script>
+<script type="text/javascript" src="/library/jQuery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/library/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="/library/chosen_v1.7.0/chosen.jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/library/angularJS/angular.min.js"></script>
+<script type="text/javascript" src="/library/textAngular/dist/textAngular-rangy.min.js"></script>
+<script type="text/javascript" src="/library/textAngular/dist/textAngular-sanitize.min.js"></script>
+<script type="text/javascript" src="/library/textAngular/dist/textAngular.min.js"></script>
+<script type="text/javascript" src="/scripts/myadmin.js"></script>
 
 </html>
