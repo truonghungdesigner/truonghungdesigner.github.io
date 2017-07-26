@@ -35,6 +35,16 @@ scotchApp.config(function($routeProvider) {
             controller: 'contactController'
         })
 
+    .when('/register', {
+        templateUrl: 'page/register.html',
+        controller: 'contactController'
+    })
+
+    .when('/login', {
+        templateUrl: 'page/login.html',
+        controller: 'contactController'
+    })
+
     .when('/videopost', {
         templateUrl: 'page/videopost.html',
         controller: 'contactController'
