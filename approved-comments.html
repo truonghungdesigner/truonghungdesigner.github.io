@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi" ng-app="textAngularTest">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project BlogPOST With Bootstrap - AngularJS | Trương Thanh Hưng WD</title>
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrom=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Blog Chia Sẽ SEO Webdesign">
+    <meta name="keywords" content="blog project, blog post, project">
+    <meta name="author" content="Truong Thanh Hung">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon-192x192.ico">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/resetStyle.css">
+    <link rel="stylesheet" type="text/css" href="library/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="styles/approved.css">
+</head>
+
+<body>
+    <div class="container style-containerAdmin">
+        <div class="row rowAdmin-style">
+            <div class="col-md-2 col-sm-1 hidden-xs colAdmin-style valign-top" id="side-menu">
+                <h2 class="hidden-sm hidden-xs">Navigation</h2>
+                <ul>
+                    <li class="link">
+                        <a href="admin.html">
+                            <span class="fa fa-th" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Bảng tin</span>
+                        </a>
+                    </li>
+                    <!-- ADMIN MEDIA LIBRARY -->
+                    <li class="link">
+                        <a href="#collapse-media" data-toggle="collapse" aria-controls="collapse-media">
+                            <span class="fa fa-dropbox" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Thư viện</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-media">
+                            <li><a href="new-media.html">Thêm tập tin</a></li>
+                            <li><a href="all-medi.html">Thư viện</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ADMIN POST -->
+                    <li class="link">
+                        <a href="#collapse-post" data-toggle="collapse" aria-controls="collapse-post">
+                            <span class="fa fa-list-alt" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Bài viết</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-post">
+                            <li><a href="new-post.html">Bài viết mới</a></li>
+                            <li>
+                                <a href="all-post.html">Tất cả bài viết
+                                    <span class="label label-success pull-right hidden-sm hidden-xs">8001</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ADMIN CATEGORIES -->
+                    <li class="link">
+                        <a href="#collapse-categories" data-toggle="collapse" aria-controls="collapse-categories">
+                            <span class="fa fa-tags" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Chuyên mục</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-categories">
+                            <li><a href="new-categories.html">Thêm chuyên mục</a></li>
+                            <li>
+                                <a href="all-categories.html">Chuyên mục
+                                    <span class="label label-success pull-right hidden-sm hidden-xs">500</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ADMIN COMMENTS -->
+                    <li class="link active">
+                        <a href="#collapse-comments" data-toggle="collapse" aria-controls="collapse-comments">
+                            <span class="fa fa-pencil" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Bình luận</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-comments">
+                            <li>
+                                <a href="approved-comments.html">Đã duyệt qua
+                                    <span class="label label-success pull-right hidden-sm hidden-xs">100</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="unapproved-comments.html">Không duyệt qua
+                                    <span class="label label-warning pull-right hidden-sm hidden-xs">10</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ADMIN SETTINGS -->
+                    <li class="link settings-btn">
+                        <a href="admin-setting.html">
+                            <span class="fa fa-cog" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Cài đặt</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End sider menu -->
+            <!-- Start Right Contents -->
+            <div class=" col-md-10 col-sm-11 colAdmin-style valign-top">
+                <div class="row">
+                    <header id="nav-header-style" class="clearfix">
+                        <div class="col-md-5">
+                            <nav class="navbar-default navbar-default-style pull-left">
+                                <!-- TAO DAU 3 GACH TREN MOBILE -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <input type="text" class="hidden-sm hidden-xs" id="header-search-field-style" name="search-are" value="" placeholder="Tìm kiếm...">
+                        </div>
+                        <!-- End of search -->
+                        <div class="col-md-7">
+                            <ul class="pull-right">
+                                <li class="style-welcome hidden-xs">Xin chào bạn đến với trang quản lý !</li>
+                                <li class="fixed-width">
+                                    <a href="#">
+                                        <span class="fa fa-bell style-fa" aria-hidden="true"></span>
+                                        <span class="label label-warning">5</span>
+                                    </a>
+                                </li>
+                                <li class="fixed-width">
+                                    <a href="#">
+                                        <span class="fa fa-envelope style-fa" aria-hidden="true"></span>
+                                        <span class="label label-message">9</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-sign-out style-fa single-fa-last" aria-hidden="true">Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--End of Login admin -->
+                    </header>
+                </div>
+                <!-- CREATE NEW POST -->
+                <div id="content-newPost">
+                    <header class="clearfix">
+                        <h2 class="general-post">Tất cả bình luận</h2>
+                        <button type="button" class="btn btn-xs btn-primary pull-right">Viết bài mới</button>
+                    </header>
+                    <div class="content-inner">
+                        <div class="row serach-row-style">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control search-style" id="serach" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-primary go-style">Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row comments-row">
+                            <div class="col-sm-2 col-md-1">
+                                <img class="img-circle responsive hidden-xs" src="https://api.fnkr.net/testimg/70x70/00CED1/FFF/?text=70x70" alt=" " />
+                            </div>
+
+                            <div class="col-sm-10 col-md-11 ">
+                                <div class="row">
+                                    <div class="col-xs-9 col-sm-10 col-md-9">
+                                        <b>Kingsley ijomah</b> posted messages on <b>How all things are mde...</b><br/>
+                                        <small>Today 2:22 pm - 523/07/2017</small>
+                                    </div>
+
+                                    <div class="col-xs-3 col-ms-2 col-md-3">
+                                        <div class="clearfix">
+                                            <div class="pull-right comment-age">
+                                                2 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="well well-sm comments-well">
+                                    “Hiếu nhận hồ sơ của tôi và hoàn thành các thủ tục cần thiết. Tôi có nói với Hiếu là gia đình cần giấy khai tử gấp nếu không sẽ không kịp làm thủ tục tang lễ cho ông. Sau đó, Hiếu đưa tôi ký giấy tờ và hẹn 14h-14h30 chiều cùng ngày lên lấy giấy khai tử
+                                    vì hiện sếp đang đi họp”, lời chị Hoa.
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-xs btn-default style-btn-default" role="button">
+                                            <span class="fa fa-thumbs-down" aria-hidden="true"></span> Không chấp nhận
+                                        </a>
+
+                                        <a href="#" class="btn btn-xs btn-default style-btn-default" role="button">
+                                            <span class="fa fa-remove" aria-hidden="true"></span> Xóa bình luận
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of row search and wellcom -->
+                <div class="row">
+                    <footer id="admin-footer " class="clearnfix ">
+                        <div class="pull-left "><b>Project Copyright </b>&copy 2017</div>
+                        <div class="pull-right ">Manager My Admin Truong Thanh Hung</div>
+                    </footer>
+                </div>
+            </div>
+            <!-- End of Main content Amin -->
+        </div>
+    </div>
+    </div>
+</body>
+<!-- Text/JavaScript -->
+<script type="text/javascript " src="/library/jQuery/jquery-3.2.1.min.js "></script>
+<script type="text/javascript " src="/library/bootstrap/bootstrap.min.js "></script>
+
+<script type="text/javascript " src="/scripts/myadmin.js "></script>
+
+</html>
