@@ -185,3 +185,56 @@ h3 {
 .text-3 {
     text-align: justify;
 }
+
+
+/* Crop display imges css */
+
+.thumb-01 {
+    width: 652px;
+    height: 400px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.thumb-02 {
+    width: 290px;
+    height: 200px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.thumb-03 {
+    width: 384px;
+    height: 360px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.thumb-04 {
+    width: 344px;
+    height: 200px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.thumb-05 {
+    width: 98px;
+    height: 90px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
