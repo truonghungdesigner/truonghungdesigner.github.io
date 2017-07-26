@@ -6,8 +6,8 @@ scotchApp.config(function($routeProvider) {
     $routeProvider
 
     // route for the home page
-        .when('/testindex2', {
-        templateUrl: '/page/testindex2.html',
+        .when('/', {
+        templateUrl: '/page/home.html',
         controller: 'mainController'
     })
 });
