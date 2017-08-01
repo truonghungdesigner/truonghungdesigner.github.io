@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .w3d-hov-04 {
+            background-color: #fff;
+            color: #ffffff;
+            display: inline-block;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 16px;
+            margin: 10px 5px;
+            max-width: 315px;
+            min-width: 230px;
+            overflow: hidden;
+            position: relative;
+            text-align: right;
+            width: 100%;
+        }
+        
+        .w3d-hov-04 *,
+        .w3d-hov-04 *:before,
+        .w3d-hov-04 *:after {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.45s ease;
+            transition: all 0.45s ease;
+        }
+        
+        .w3d-hov-04 img {
+            backface-visibility: hidden;
+            max-width: 100%;
+            vertical-align: top;
+        }
+        
+        .w3d-hov-04:before,
+        .w3d-hov-04:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            background-color: #b81212;
+            opacity: 0.5;
+            -webkit-transition: all 0.45s ease;
+            transition: all 0.45s ease;
+        }
+        
+        .w3d-hov-04:before {
+            -webkit-transform: skew(30deg) translateX(80%);
+            transform: skew(30deg) translateX(80%);
+        }
+        
+        .w3d-hov-04:after {
+            -webkit-transform: skew(-30deg) translateX(70%);
+            transform: skew(-30deg) translateX(70%);
+        }
+        
+        .w3d-hov-04 figcaption {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: 1;
+            bottom: 0;
+            padding: 20px 20px 20px 40%;
+        }
+        
+        .w3d-hov-04 figcaption:before,
+        .w3d-hov-04 figcaption:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #b81212;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            content: '';
+            opacity: 0.5;
+            z-index: -1;
+        }
+        
+        .w3d-hov-04 figcaption:before {
+            -webkit-transform: skew(30deg) translateX(100%);
+            transform: skew(30deg) translateX(100%);
+        }
+        
+        .w3d-hov-04 figcaption:after {
+            -webkit-transform: skew(-30deg) translateX(90%);
+            transform: skew(-30deg) translateX(90%);
+        }
+        
+        .w3d-hov-04 h3,
+        .w3d-hov-04 p {
+            margin: 0;
+            opacity: 0;
+            letter-spacing: 1px;
+        }
+        
+        .w3d-hov-04 h3 {
+            font-family: 'Teko', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+        
+        .w3d-hov-04 p {
+            font-size: 0.9em;
+        }
+        
+        .w3d-hov-04 a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        
+        .w3d-hov-04:hover h3,
+        .w3d-hov-04.hover h3,
+        .w3d-hov-04:hover p,
+        .w3d-hov-04.hover p {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 0.9;
+        }
+        
+        .w3d-hov-04:hover:before,
+        .w3d-hov-04.hover:before {
+            -webkit-transform: skew(30deg) translateX(30%);
+            transform: skew(30deg) translateX(30%);
+            -webkit-transition-delay: 0.05s;
+            transition-delay: 0.05s;
+        }
+        
+        .w3d-hov-04:hover:after,
+        .w3d-hov-04.hover:after {
+            -webkit-transform: skew(-30deg) translateX(20%);
+            transform: skew(-30deg) translateX(20%);
+        }
+        
+        .w3d-hov-04:hover figcaption:before,
+        .w3d-hov-04.hover figcaption:before {
+            -webkit-transform: skew(30deg) translateX(50%);
+            transform: skew(30deg) translateX(50%);
+            -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+        }
+        
+        .w3d-hov-04:hover figcaption:after,
+        .w3d-hov-04.hover figcaption:after {
+            -webkit-transform: skew(-30deg) translateX(40%);
+            transform: skew(-30deg) translateX(40%);
+            -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="w3d-hov-04"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample59.jpg" alt="sample59" />
+        <figcaption>
+            <h3>Fletch Skinner</h3>
+            <p>But Calvin is no kind and loving god! He's one of the old gods! He demands sacrifice! </p>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+</body>
+
+</html>

@@ -29,7 +29,7 @@
 
 </head>
 
-<body ng-controller="mainController">
+<body ng-controller="mainController" ng-init="init()">
     <div class="sumpage-container">
         <div class="top-bar">
             <div class="container">
@@ -91,19 +91,12 @@
                         <div class="collapse navbar-collapse collapse-style" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="#/">Trang chủ</a></li>
-                                <li><a href="#categories-webdesign">Webdesign</a></li>
-                                <li><a href="#categories-seo">SEO</a></li>
-
-                                <li class="dropdown">
-                                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Bài viết<b class="caret"></b></a>
+                                <li ng-init="apiGetCat()" class="dropdown">
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Categories <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#textpost">Text Post</a></li>
-                                        <li><a href="#videopost">Video Post</a></li>
+                                        <li ng-repeat="cat in Categories"><a href="#">{{cat.name}}</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="admin.html" target="_blank">Admin</a></li>
-
-                                <li><a href="#textpost">Liên hệ</a></li>
                             </ul>
                             <div class="hidden-xs hidden-sm col-md-3 navbar-right style-navbar-form">
                                 <form class="navbar-form style-navbar-form pull-right" role="search">
@@ -209,25 +202,20 @@
             </div>
         </div>
         <!--CODE FANPAGE -->
-        <div id="fb-root"></div>
-        <script>
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=300882993612385";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+
 </body>
 <!-- Text/JavaScript -->
-<script type="text/javascript " src="library/jQuery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript " src="library/angularJS/angular.min.js"></script>
+<script type="text/javascript " src="/library/jQuery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript " src="/library/bootstrap/bootstrap.min.js "></script>
+<script type="text/javascript " src="/scripts/myScript.js"></script>
+<script type="text/javascript " src="/scripts/myadmin.js"></script>
+
+
+
+<script type="text/javascript " src="/library/angularJS/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-<script type="text/javascript " src="scripts/opaapp.js"></script>
-<script type="text/javascript " src="library/bootstrap/bootstrap.min.js "></script>
-<script type="text/javascript " src="scripts/myScript.js"></script>
-<script type="text/javascript " src="scripts/myadmin.js"></script>
+<script type="text/javascript " src="/scripts/opaapp.js"></script>
+
+
 
 </html>

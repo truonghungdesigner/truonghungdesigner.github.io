@@ -1,7 +1,3 @@
-$.noConflict();
-jQuery(document).ready(function() {
-
-});
 // create the module and name it scotchApp
 var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
@@ -25,25 +21,15 @@ scotchApp.config(function($routeProvider) {
             templateUrl: 'page/categories-webdesign.html',
             controller: 'aboutController'
         })
-        .when('/categories-seo', {
-            templateUrl: 'page/categories-seo.html',
+        .when('/login', {
+            templateUrl: 'page/login.html',
             controller: 'contactController'
         })
         // route for the contact page
-        .when('/textpost', {
-            templateUrl: 'page/textpost.html',
+        .when('/register', {
+            templateUrl: 'page/register.html',
             controller: 'contactController'
         })
-
-    .when('/register', {
-        templateUrl: 'page/register.html',
-        controller: 'contactController'
-    })
-
-    .when('/login', {
-        templateUrl: 'page/login.html',
-        controller: 'contactController'
-    })
 
     .when('/videopost', {
         templateUrl: 'page/videopost.html',
@@ -51,16 +37,57 @@ scotchApp.config(function($routeProvider) {
     });
 });
 
-// create the controller and inject Angular's $scope
-scotchApp.controller('mainController', function($scope) {
+
+scotchApp.controller('mainController', function($scope, $http) {
     // create a message to display in our view
+    var root = "https://green-web-blog.herokuapp.com";
+
     $scope.message = 'Everyone come and see how good I look!';
-});
+    var apiGetCat = function() {
+        $http.get(root + "/api/categories")
+            .then(function(response) {
+                //
+                $scope.Categories = response.data;
+            });
 
-scotchApp.controller('aboutController', function($scope) {
-    $scope.message = 'Look! I am an about page.';
-});
+    };
 
-scotchApp.controller('contactController', function($scope) {
-    $scope.message = 'Contact us! JK. This is just a demo.';
+    var apiGetArt = function() {
+        $http.get(root + "/api/articles")
+            .then(function(response) {
+                //
+                $scope.Articles = response.data;
+            });
+
+    };
+
+    var init = function() {
+        apiGetCat();
+        apiGetArt();
+    };
+
+    init();
+
+    console.log($scope.Categories)
+
+
+    $scope.login = function() {
+        console.log($scope.user);
+
+        //POST Login API below:
+        $http.post(root + '/api/users/auth', $scope.user)
+            .success(function(response) {
+                var isSuccess = response.success;
+                if (isSuccess) {
+                    console.log(response);
+                } else {
+                    //Raise Error
+                    alert(response.message);
+                }
+            })
+            .error(function(data, status, headers, config) {
+                console.log(data, status, headers, config);
+            });
+    };
+
 });
