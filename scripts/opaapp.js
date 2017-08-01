@@ -70,6 +70,49 @@ scotchApp.controller('mainController', function($scope, $http) {
 
     console.log($scope.Categories)
 
+    /* ADD NEW CATEGORIES */
+    $scope.getCategoryNameOfArticle = function(id) {
+
+        if (undefined != $scope.categories) {
+            for (i = 0; i < $scope.categories.length; i++) {
+                var cat = $scope.categories[i];
+                if (cat._id == id) {
+                    return cat.name;
+                };
+            };
+        };
+
+    };
+
+    $scope.submitCreateCategory = function() {
+
+        if ($scope.newCategory.name.length > 0 &&
+            $scope.newCategory.description.length > 0) {
+            $http.post(root + "/api/categories", $scope.newCategory)
+                .success(function(response) {
+                    $scope.categories.push(response);
+                    $scope.newCategory.name = "";
+                    $scope.newCategory.description = "";
+
+                }).error(function(data, status, headers, config) {
+                    console.log(data, status, headers, config);
+                });
+        } else {
+            alert("Input invalid");
+        };
+
+    };
+    $scope.submitCreateArticle = function() {
+        console.log($scope.newArticle);
+        $scope.newArticle._author = "598051e25573430004b961e8";
+        $http.post(root + '/api/articles/', $scope.newArticle)
+            .success(function(response) {
+                alert("Thành công")
+            }).error(function(data, status, headers, config) {
+                console.log(data, status, headers, config);
+            });;
+    };
+    /* END OF ADD NEW CATEGORIES */
 
     $scope.login = function() {
         console.log($scope.user);
