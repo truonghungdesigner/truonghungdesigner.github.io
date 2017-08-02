@@ -73,9 +73,9 @@ scotchApp.controller('mainController', function($scope, $http) {
     /* ADD NEW CATEGORIES */
     $scope.getCategoryNameOfArticle = function(id) {
 
-        if (undefined != $scope.categories) {
-            for (i = 0; i < $scope.categories.length; i++) {
-                var cat = $scope.categories[i];
+        if (undefined != $scope.Categories) {
+            for (i = 0; i < $scope.Categories.length; i++) {
+                var cat = $scope.Categories[i];
                 if (cat._id == id) {
                     return cat.name;
                 };

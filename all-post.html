@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="styles/newPost.css">
 </head>
 
-<body>
+<body ng-app="scotchApp" ng-controller="mainController">
     <div class="container style-containerAdmin">
         <div class="row rowAdmin-style">
             <div class="col-md-2 col-sm-1 hidden-xs colAdmin-style valign-top" id="side-menu">
@@ -154,7 +154,7 @@
                     </header>
                 </div>
                 <!-- CREATE NEW POST -->
-                <div id="content-newPost">
+                <div ng-init="apiGetArt()" id="content-newPost">
                     <header class="clearfix">
                         <h2 class="general-post">Tất cả bài viết</h2>
                         <button type="button" class="btn btn-xs btn-primary pull-right">Viết bài mới</button>
@@ -170,86 +170,41 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row allPost-row">
-                            <div class="col-md-1 status-padding">
-                                <span class="label label-success label-sm">Đã đăng</span>
-                            </div>
+                        <div ng-repeat="x in Articles" class="row allPost-row">
+                            <div class="col-md-2 status-padding">
 
-                            <div class="col-md-8">
-                                <p>Cái chết đau đớn nhất theo kiểu 1 chú dán tội nghiệp.</p>
-                                <small class="title-allPost">Ngày đăng: 30/06/2017</small>
+                                <span>{{x._author.name}}</span>
                             </div>
-
                             <div class="col-md-3">
+
+                                <span>{{x.updatedDate}}</span>
+                            </div>
+                            <div class="col-md-3">
+
+                                <p>{{x.title}}</p>
+                                <span>Ngày đăng: </span><small class="title-allPost">{{x.createdDate}}</small>
+                            </div>
+                            <div class="col-md-1">
+                                <span>{{getCategoryNameOfArticle(x._category)}}</span>
+                            </div>
+                            <div class="col-md-2">
                                 <div class="post-action">
                                     <a class="btn btn-xs btn-default" href="#" role="button">
                                         <span class="fa fa-folder-open" aria-hidden="true"> Xem</span>
                                     </a>
 
-                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                    <a class="btn btn-xs btn-default" href=="#{{x._id}}" role="button">
                                         <span class="fa fa-pencil" aria-hidden="true"> Sửa</span>
                                     </a>
 
-                                    <a class="btn btn-xs btn-default" href="#" role="button">
+                                    <a class="btn btn-xs btn-default" href="#{{x._id}}" role="button">
                                         <span class="fa fa-remove" aria-hidden="true"> Xóa</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row allPost-row">
-                            <div class="col-md-1 status-padding">
-                                <span class="label label-success label-sm">Đã đăng</span>
-                            </div>
 
-                            <div class="col-md-8">
-                                <p>Cái chết đau đớn nhất theo kiểu 1 chú dán tội nghiệp.</p>
-                                <small class="title-allPost">Ngày đăng: 30/06/2017</small>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="post-action">
-                                    <a class="btn btn-xs btn-default" href="#" role="button">
-                                        <span class="fa fa-folder-open" aria-hidden="true"> Xem</span>
-                                    </a>
-
-                                    <a class="btn btn-xs btn-default" href="#" role="button">
-                                        <span class="fa fa-pencil" aria-hidden="true"> Sửa</span>
-                                    </a>
-
-                                    <a class="btn btn-xs btn-default" href="#" role="button">
-                                        <span class="fa fa-remove" aria-hidden="true"> Xóa</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row allPost-row">
-                            <div class="col-md-1 status-padding">
-                                <span class="label label-warning label-sm">Bản Nháp</span>
-                            </div>
-
-                            <div class="col-md-8">
-                                <p>Cái chết đau đớn nhất theo kiểu 1 chú dán tội nghiệp.</p>
-                                <small class="title-allPost">Ngày đăng: 30/06/2017</small>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="post-action">
-                                    <a class="btn btn-xs btn-default" href="#" role="button">
-                                        <span class="fa fa-folder-open" aria-hidden="true"> Xem</span>
-                                    </a>
-
-                                    <a class="btn btn-xs btn-default" href="#" role="button">
-                                        <span class="fa fa-pencil" aria-hidden="true"> Sửa</span>
-                                    </a>
-
-                                    <a class="btn btn-xs btn-default" href="#" role="button">
-                                        <span class="fa fa-remove" aria-hidden="true"> Xóa</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                         <hr/>
                         <div class="row">
                             <ul class="pagination">
@@ -280,8 +235,13 @@
 </body>
 <!-- Text/JavaScript -->
 <script type="text/javascript" src="library/jQuery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="library/angularJS/angular.min.js"></script>
 <script type="text/javascript" src="library/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/myadmin.js"></script>
+
+
+<script type="text/javascript" src="library/angularJS/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script type="text/javascript" src="scripts/opaapp.js"></script>
+
 
 </html>
