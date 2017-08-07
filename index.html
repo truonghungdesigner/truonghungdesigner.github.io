@@ -90,8 +90,9 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse collapse-style" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#/">Trang chủ</a></li>
-                                <li class="admin.html"><a href="#/">Admin</a></li>
+                                <li><a href="#/">Trang chủ</a></li>
+                                <li><a href="#textpost">Details</a></li>
+                                <li><a href="admin.html" target="_blank">Admin</a></li>
                                 <li ng-init="apiGetCat()" class="dropdown">
                                     <a href="" class="dropdown-toggle" data-toggle="dropdown">Categories <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -148,8 +149,9 @@
 
             <!-- angular templating -->
             <!-- this is where content will be injected -->
-            <div ng-view></div>
-
+            <div ng-init="apiGetArt()">
+                <div ng-view></div>
+            </div>
         </div>
         <!-- START FOOTER -->
         <footer>

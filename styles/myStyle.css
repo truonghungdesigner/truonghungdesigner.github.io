@@ -1014,3 +1014,44 @@ footer {
 .box-register .form-control:focus {
     border: 2px solid #2B4C98;
 }
+
+
+/* center crop images center */
+
+.thumb-center-crop {
+	position: relative;
+	width:370px;
+	height:250px;
+	overflow: hidden;
+}
+
+.thumb-center-crop img {
+	position: absolute;
+	left:50%;
+	top:50%;
+	height:100%;
+	width: auto;
+}
+.thumb-center-crop img.potrait {
+	width: 100%;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

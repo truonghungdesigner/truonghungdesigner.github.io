@@ -1,5 +1,5 @@
 <!-- breadcrumb-area -->
-<div class="breadcrumb-area clearfix">
+<div ng-init="getArticle()" class="breadcrumb-area clearfix">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-col-breadcrumb">
@@ -20,14 +20,14 @@
         <div class="row five-news-style">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
                 <a href="#" class="hover-images">
-                    <img class="media-images img-responsive hover-big-images" src="images/post-01.png" alt="tilte-post-01" title="Blog Project">
+                    <img ng-src="{{article.media}}" class="media-images img-responsive hover-big-images">
                 </a>
-                <h1 class="title-post">Cách viết bài chuẩn SEO lên TOP Google trong 1 phút 30 giây</h1>
+                <h1 class="title-post">{{article.title}}</h1>
                 <ul class="list-inline list-unstyled">
 
-                    <li><span><i class="fa fa-calendar"></i> 2 ngày, 8 giờ </span></li>
+                    <li><span><i class="fa fa-calendar"></i> {{article.createdDate}}} </span></li>
                     <li>|</li>
-                    <span><i class="fa fa-comment"></i> 2 bình luận</span>
+                    <span><i class="fa fa-comment"></i> {{article._author.name}}</span>
                     <li>|</li>
                     <li>
                         <span class="fa fa-star"></span>
@@ -39,32 +39,11 @@
                 </ul>
                 <div class="content-post">
                     <p>
-                        Xu hướng SEO năm 2017 được nhiều người (trong đó có mình) đánh giá là một năm cạnh tranh khốc liệt giữa những xu hướng tập trung vào nội dung, lấy nội dung làm nền tảng phục vụ nhu cầu tìm kiếm của người dùng.
+                        {{article.description}}
                     </p>
                     <p>
-                        Xét theo khía cạnh tích cực mà nói thì nội dung không những giúp bạn có những traffic tập trung, nhắm đúng đối tượng cần hướng tới mà còn một phương pháp duy trì sự tương tác với độc giả về lâu dài. Không giấu giếm gì, mình đã có nhờ một người đi làm
-                        tư liệu để viết bài Hướng dẫn mở thẻ Visa Prepaid và verify PayPal với giá là 1 triệu cho 30 phút làm việc, có nhiều lý do thì mình mới chấp nhận đầu tư cho nội dung như vậy. Mình mong là các bạn cũng nghĩ thế.
+                        {{article.content}}
                     </p>
-                    <p>
-                        Cái khó khăn khi viết nội dung đó là ý tưởng đã được mình gỡ rối một phần nào khi đã gợi ý cho bạn 30 hướng tìm ý tưởng viết bài. Nhưng chưa dừng lại ở đó, có ý tưởng rồi, nhưng viết như thế nào để bài viết đó có thể đạt thứ hạng cao trên kết quả tìm
-                        kiếm ngay sau khi nó được đăng? Mình tin là mình sẽ giúp các bạn một phần nào trả lời câu hỏi này ngay trong bài hướng dẫn viết nội dung theo chuẩn SEO, hoặc mình có thể mượn một cụm từ chuyên môn và “mix” lại là SEO Copywriting.
-                        Let’s start!
-                    </p>
-                    <img class="img-responsive img-center" src="images/seo-bai-viet.jpg" alt="eo-bai-viet" title="SEO bài viết chuẩn Google">
-                    <h2>Bài viết theo chuẩn SEO là như thế nào?</h2>
-                    <p>
-                        Mình thì ít thấy các cao thủ SEO Việt Nam nói nhiều về việc viết bài theo chuẩn SEO nên mình cũng không biết dùng từ ngữ thế nào cho thích hợp, vì vậy mình xin tóm lượt các tiêu chuẩn để một bài viết thân thiện với máy tìm kiếm là như thế nào.
-                    </p>
-                    <ol>
-                        <li>Được viết tự nhiên, không lặp lại một từ khóa quá nhiều lần.</li>
-                        <li>Các từ khóa quan trọng phải luôn được “mix” thành các từ khóa phụ liên quan. Ví dụ: Cài đặt WordPress và Cài blog WordPress</li>
-                        <li>Từ khóa quan trọng nên xuất hiện 1 lần ở phần đầu tiên của bài viết, 2 lần ở đoạn giữa và 1 lần ở cuối bài.</li>
-                        <li>Từ khóa quan trọng phải được đưa lên thẻ title và meta description.</li>
-                        <li>Thẻ meta description phải chứa từ khóa quan trọng lẫn từ khóa phụ, được gọi là bổ nghĩa cho nó nhưng vẫn thân thiện với các truy vấn tìm kiếm.</li>
-                        <li>Và quan trọng nhất, là chọn cũng như sử dụng từ khóa tối ưu nhất có thể, đây là mấu chốt của vấn đề.</li>
-                    </ol>
-                    <h3>Lời kết</h3>
-                    <p>Tới đây thì coi như bạn đã vừa viết được một bài khá là thân thiện với máy tìm kiếm, hợp chuẩn SEO rồi. Sau khi viết xong bài thì các bạn nên tự đặt ra một số câu hỏi nữa để có thể tối ưu bài viết tốt hơn. </p>
                     <!-- SOCIAL POST -->
                     <div class="social-post-area">
                         <ul class="mbm_social">

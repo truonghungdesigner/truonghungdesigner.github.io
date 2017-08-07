@@ -5,174 +5,163 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
     <style>
-        .w3d-hov-04 {
-            background-color: #fff;
-            color: #ffffff;
-            display: inline-block;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 16px;
-            margin: 10px 5px;
-            max-width: 315px;
-            min-width: 230px;
-            overflow: hidden;
+        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+        .w3d-hov-6 {
+            font-family: 'Raleway', Arial, sans-serif;
             position: relative;
-            text-align: right;
+            float: left;
+            overflow: hidden;
+            margin: 10px 1%;
+            min-width: 230px;
+            max-width: 315px;
             width: 100%;
+            background: #ffffff;
+            text-align: left;
+            color: #000000;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            font-size: 16px;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-perspective: 20em;
+            perspective: 20em;
         }
         
-        .w3d-hov-04 *,
-        .w3d-hov-04 *:before,
-        .w3d-hov-04 *:after {
+        .w3d-hov-6 * {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            -webkit-transition: all 0.45s ease;
-            transition: all 0.45s ease;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
         }
         
-        .w3d-hov-04 img {
-            backface-visibility: hidden;
+        .w3d-hov-6 img {
             max-width: 100%;
             vertical-align: top;
+            position: relative;
         }
         
-        .w3d-hov-04:before,
-        .w3d-hov-04:after {
+        .w3d-hov-6 .add-to-cart {
             position: absolute;
             top: 0;
-            bottom: 0;
-            left: 0;
             right: 0;
-            content: '';
-            background-color: #b81212;
-            opacity: 0.5;
-            -webkit-transition: all 0.45s ease;
-            transition: all 0.45s ease;
-        }
-        
-        .w3d-hov-04:before {
-            -webkit-transform: skew(30deg) translateX(80%);
-            transform: skew(30deg) translateX(80%);
-        }
-        
-        .w3d-hov-04:after {
-            -webkit-transform: skew(-30deg) translateX(70%);
-            transform: skew(-30deg) translateX(70%);
-        }
-        
-        .w3d-hov-04 figcaption {
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-            z-index: 1;
-            bottom: 0;
-            padding: 20px 20px 20px 40%;
-        }
-        
-        .w3d-hov-04 figcaption:before,
-        .w3d-hov-04 figcaption:after {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #b81212;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-            content: '';
-            opacity: 0.5;
-            z-index: -1;
-        }
-        
-        .w3d-hov-04 figcaption:before {
-            -webkit-transform: skew(30deg) translateX(100%);
-            transform: skew(30deg) translateX(100%);
-        }
-        
-        .w3d-hov-04 figcaption:after {
-            -webkit-transform: skew(-30deg) translateX(90%);
-            transform: skew(-30deg) translateX(90%);
-        }
-        
-        .w3d-hov-04 h3,
-        .w3d-hov-04 p {
-            margin: 0;
-            opacity: 0;
-            letter-spacing: 1px;
-        }
-        
-        .w3d-hov-04 h3 {
-            font-family: 'Teko', sans-serif;
-            font-size: 36px;
+            padding-right: 10px;
+            color: #ffffff;
             font-weight: 700;
-            line-height: 1em;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            opacity: 0;
+            background-color: #409ad5;
+            -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+            -webkit-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+        }
+        
+        .w3d-hov-6 .add-to-cart i {
+            display: inline-block;
+            margin-right: 10px;
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #164666;
+            color: #ffffff;
+            font-size: 1.4em;
+        }
+        
+        .w3d-hov-6 figcaption {
+            padding: 20px;
+        }
+        
+        .w3d-hov-6 h3,
+        .w3d-hov-6 p {
+            margin: 0;
+        }
+        
+        .w3d-hov-6 h3 {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
             text-transform: uppercase;
         }
         
-        .w3d-hov-04 p {
+        .w3d-hov-6 p {
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+        
+        .w3d-hov-6 .price {
+            font-weight: 500;
+            font-size: 1.5em;
+            line-height: 48px;
+            letter-spacing: 1px;
+        }
+        
+        .w3d-hov-6 .price s {
+            margin-right: 5px;
+            opacity: 0.5;
             font-size: 0.9em;
         }
         
-        .w3d-hov-04 a {
+        .w3d-hov-6 a {
             position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
-            z-index: 1;
         }
         
-        .w3d-hov-04:hover h3,
-        .w3d-hov-04.hover h3,
-        .w3d-hov-04:hover p,
-        .w3d-hov-04.hover p {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            opacity: 0.9;
+        .w3d-hov-6:hover .add-to-cart,
+        .w3d-hov-6.hover .add-to-cart {
+            opacity: 1;
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
         }
         
-        .w3d-hov-04:hover:before,
-        .w3d-hov-04.hover:before {
-            -webkit-transform: skew(30deg) translateX(30%);
-            transform: skew(30deg) translateX(30%);
-            -webkit-transition-delay: 0.05s;
-            transition-delay: 0.05s;
-        }
-        
-        .w3d-hov-04:hover:after,
-        .w3d-hov-04.hover:after {
-            -webkit-transform: skew(-30deg) translateX(20%);
-            transform: skew(-30deg) translateX(20%);
-        }
-        
-        .w3d-hov-04:hover figcaption:before,
-        .w3d-hov-04.hover figcaption:before {
-            -webkit-transform: skew(30deg) translateX(50%);
-            transform: skew(30deg) translateX(50%);
-            -webkit-transition-delay: 0.15s;
-            transition-delay: 0.15s;
-        }
-        
-        .w3d-hov-04:hover figcaption:after,
-        .w3d-hov-04.hover figcaption:after {
-            -webkit-transform: skew(-30deg) translateX(40%);
-            transform: skew(-30deg) translateX(40%);
-            -webkit-transition-delay: 0.1s;
-            transition-delay: 0.1s;
+        .w3d-hov-6:hover .add-to-cart i,
+        .w3d-hov-6.hover .add-to-cart i {
+            background-color: #2980b9;
         }
     </style>
 </head>
 
 <body>
-    <figure class="w3d-hov-04"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample59.jpg" alt="sample59" />
+    <figure class="w3d-hov-6"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample85.jpg" alt="sample85" />
+        <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
         <figcaption>
-            <h3>Fletch Skinner</h3>
-            <p>But Calvin is no kind and loving god! He's one of the old gods! He demands sacrifice! </p>
+            <h3>Pudol Doux</h3>
+            <p>All this modern technology just makes people try to do everything at once.</p>
+            <div class="price">
+                <s>$24.00</s>$19.00
+            </div>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="w3d-hov-6"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample96.jpg" alt="sample96" />
+        <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+        <figcaption>
+            <h3>Kurie Secco</h3>
+            <p>If you do the job badly enough, sometimes you don't get asked to do it again. </p>
+            <div class="price">
+                <s>$24.00</s>$19.00
+            </div>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="w3d-hov-6"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92" />
+        <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+        <figcaption>
+            <h3>Zosaisan Invec</h3>
+            <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
+            <div class="price">
+                <s>$24.00</s>$19.00
+            </div>
         </figcaption>
         <a href="#"></a>
     </figure>
 </body>
+
 
 </html>

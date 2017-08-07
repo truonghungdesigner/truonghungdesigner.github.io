@@ -11,9 +11,8 @@ jQuery(document).ready(function() {
         '.chosen-select-width': { width: "95%" }
     }
     for (var selector in config) {
-        jQuery(selector).chosen(config[selector]);
+
     };
 
 
 });
-var textAngularTest = angular.module('textAngularTest', ['textAngular']);

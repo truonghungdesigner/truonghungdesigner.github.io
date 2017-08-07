@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" ng-app="textAngularTest">
+<html lang="vi" ng-app="scotchApp">
 
 <head>
     <meta charset="UTF-8">
@@ -21,13 +21,14 @@
     <link rel="stylesheet" type="text/css" href="styles/resetStyle.css">
     <link rel="stylesheet" type="text/css" href="library/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/ng-tags-input.min.css">
     <link rel="stylesheet" type="text/css" href="library/textAngular/dist/textAngular.css">
     <link rel="stylesheet" type="text/css" href="library/chosen_v1.7.0/chosen.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style-admin.css">
     <link rel="stylesheet" type="text/css" href="styles/newPost.css">
 </head>
 
-<body>
+<body ng-controller="mainController">
     <div class="container style-containerAdmin">
         <div class="row rowAdmin-style">
             <div class="col-md-2 col-sm-1 hidden-xs colAdmin-style valign-top" id="side-menu">
@@ -163,39 +164,29 @@
                     <div class="content-inner">
                         <div class="form-newPost">
 
-                            <form>
+                            <form ng-submit="submitCreateArticle()">
                                 <!--FORM TIÊU ĐỀ -->
                                 <div class="form-group">
                                     <label class="sr-only">Tiêu đề bài viết</label>
-                                    <input type="text" class="form-control" id="title-newPost" placeholder="Nhập tiêu đề tại đây">
+                                    <input ng-model="newArticle.title" type="text" class="form-control" id="title-newPost" placeholder="Nhập tiêu đề tại đây">
                                 </div>
                                 <!--FORM CATEGORIES -->
-                                <div class="form-group">
-                                    <label class="sr-only">Chuyên mục</label>
-                                    <select data-placeholder="Select categories" multiple name="categories" class="form-control chosen-select">
-                                        <option></option>
-                                        <option>HTML5</option>
-                                        <option>CSS3</option>
-                                        <option>Bootstrap</option>
-                                        <option>JavaScript</option>
-                                        <option>jQuery</option>
-                                        <option>AngularJS 1</option>
-                                    </select>
+                                <div class="form-group" ng-init="apiGetCat()">
+                                    <label>Category</label>
+                                    <select ng-model="newArticle.category" ng-required="true" class="form-control" ng-options="category as category.name for category in Categories track by category._id" />
                                 </div>
 
                                 <!--FORM SỌAN THẢO -->
                                 <div class="form-group">
-                                    <label class="sr-only">Soạn thảo</label>
-                                    <div text-angular ng-model="htmlVariable"></div>
-
-
+                                    <label>Soạn Thảo</label>
+                                    <textarea class="form-control" ng-model="newArticle.fullDescription"></textarea>
                                 </div>
 
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Đồng ý xuất bản bài viết công khai và lưu lại
-                                    </label>
+                                <div class="form-group">
+                                    <label>Tags</label>
+                                    <tags-input use-strings="true" height='30px' ng-model="newArticle.tags"></tags-input>
                                 </div>
+
                                 <div class="clearfix">
                                     <button type="submit" class="btn btn-primary pull-right">Đăng bài viết</button>
                                 </div>
@@ -222,13 +213,13 @@
 <script type="text/javascript" src="/library/jQuery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/library/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="/library/chosen_v1.7.0/chosen.jquery.min.js"></script>
-
+<script type="text/javascript" src="scripts/myadmin.js"></script>
 
 
 <script type="text/javascript" src="/library/angularJS/angular.min.js"></script>
-<script type="text/javascript" src="/library/textAngular/dist/textAngular-rangy.min.js"></script>
-<script type="text/javascript" src="/library/textAngular/dist/textAngular-sanitize.min.js"></script>
-<script type="text/javascript" src="/library/textAngular/dist/textAngular.min.js"></script>
-<script type="text/javascript" src="/scripts/myadmin.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+<script type="text/javascript" src="/scripts/ng-tags-input.min.js"></script>
+<script type="text/javascript " src="scripts/opaapp.js"></script>
 
 </html>
