@@ -1041,3 +1041,25 @@ footer {
     width: 100%;
     height: auto;
 }
+
+/* center crop images TOP center */
+
+.thumb-top-center-crop {
+    position: relative;
+    width: 770px;
+    height: 440px;
+    overflow: hidden;
+}
+
+.thumb-top-center-crop img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+}
+
+.thumb-top-center-crop img.potrait {
+    width: 100%;
+    height: auto;
+}
