@@ -19,9 +19,14 @@
     <![endif]-->
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="styles/resetStyle.css">
-    <link rel="stylesheet" type="text/css" href="library/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='/bower_components/ng-tags-input/ng-tags-input.min.css'>
+    <link rel='stylesheet' href='/bower_components/ng-tags-input/ng-tags-input.bootstrap.css'>
+
+    <link rel='stylesheet' href='/bower_components/textAngular/dist/textAngular.css'>
     <link rel="stylesheet" type="text/css" href="styles/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="styles/newPost.css">
 </head>
 
 <body ng-app="scotchApp" ng-controller="mainController">
@@ -235,13 +240,24 @@
     </div>
 </body>
 <!-- Text/JavaScript -->
-<script type="text/javascript" src="library/jQuery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="library/bootstrap/bootstrap.min.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/myadmin.js"></script>
 
 
-<script type="text/javascript" src="library/angularJS/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-<script type="text/javascript " src="scripts/opaapp.js"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+
+<script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+<script type="text/javascript" src="library/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+
+<script src="/bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+
+<script src='/bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+<script src='/bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+<script src='/bower_components/textAngular/dist/textAngular.min.js'></script>
+
+<script type="text/javascript" src="scripts/opaapp.js"></script>
 
 </html>

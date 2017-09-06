@@ -506,10 +506,14 @@ ul.social-network li {
     box-shadow: none;
 }
 
-.style-panel-title-webdesign,
+.style-panel-title-webdesign {
+    font-size: 24px;
+    color: blue;
+}
+
 .panel-title-seo {
     font-size: 24px;
-    color: #222222;
+    color: red;
 }
 
 .style-dropdown-menu-webdesign {
@@ -1019,39 +1023,21 @@ footer {
 /* center crop images center */
 
 .thumb-center-crop {
-	position: relative;
-	width:370px;
-	height:250px;
-	overflow: hidden;
+    position: relative;
+    width: 370px;
+    height: 250px;
+    overflow: hidden;
 }
 
 .thumb-center-crop img {
-	position: absolute;
-	left:50%;
-	top:50%;
-	height:100%;
-	width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
 }
+
 .thumb-center-crop img.potrait {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -20,9 +20,16 @@
         <![endif]-->
 
     <!-- Stylesheets -->
+
     <link rel="stylesheet" type="text/css" href="styles/resetStyle.css">
-    <link rel="stylesheet" type="text/css" href="library/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.min.css'>
+
+    <link rel='stylesheet' href='/bower_components/ng-tags-input/ng-tags-input.min.css'>
+    <link rel='stylesheet' href='/bower_components/ng-tags-input/ng-tags-input.bootstrap.css'>
+
+    <link rel='stylesheet' href='/bower_components/textAngular/dist/textAngular.css'>
+
     <link rel="stylesheet" type="text/css" href="styles/genergal.css">
     <link rel="stylesheet" type="text/css" href="styles/style-admin.css">
     <link rel="stylesheet" type="text/css" href="styles/myStyle.css">
@@ -103,9 +110,11 @@
                             <div class="hidden-xs hidden-sm col-md-3 navbar-right style-navbar-form">
                                 <form class="navbar-form style-navbar-form pull-right" role="search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control style-text-form" placeholder="Search" name="q">
+                                        <input ng-model="keySearch" type="text" class="form-control style-text-form" placeholder="Search" name="q">
                                         <div class="input-group-btn">
-                                            <button class="btn btn-default style-btn-search" type="submit"><i class="fa fa-search"></i></button>
+                                            <button class="btn btn-default style-btn-search" type="search">
+                                                <a href="#search/{{keySearch}}">
+                                                <i class="fa fa-search"></i></a></button>
                                         </div>
                                     </div>
                                 </form>
@@ -117,34 +126,7 @@
             </div>
         </div>
         <!-- END OF MIN MENU -->
-        <!-- NEWS HOT -->
-        <div class="news-hot-area clearfix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 style-hot-news-top">
-                        <span>TIN MỚI</span>
-                    </div>
-                    <div class="col-xs-9 col-sm-10 col-md-11 col-lg-11 style-hot-news-five">
-                        <marquee>
-                            <a href="#" class="post-news-01">Ngân hàng đồng loạt báo lãi lớn </a>
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            <a href="#" class="post-news-02">Doanh nghiệp quân đội làm 'kinh tế đơn thuần' phải cổ phần hóa</a>
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            <a href="#" class="post-news-03">Cuộc lội ngược dòng của cựu du học sinh Nga</a>
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            <a href="#" class="post-news-04">Kiếm hơn 200 triệu USD một tháng nhờ tiền ảo</a>
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            <a href="#" class="post-news-05">Tiền ảo thế giới đồng loạt lao dốc</a>
-                        </marquee>
-                    </div>
-                </div>
-                <!-- END OF NEWS HOT -->
-            </div>
-        </div>
+
         <div id="main">
 
             <!-- angular templating -->
@@ -208,15 +190,27 @@
 
 </body>
 <!-- Text/JavaScript -->
-<script type="text/javascript " src="/library/jQuery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript " src="/library/bootstrap/bootstrap.min.js "></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript " src="/scripts/myScript.js"></script>
 <script type="text/javascript " src="/scripts/myadmin.js"></script>
 
 
 
-<script type="text/javascript " src="/library/angularJS/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+
+<script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src='/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
+
+<script src="/bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+
+<script src='/bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+<script src='/bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+<script src='/bower_components/textAngular/dist/textAngular.min.js'></script>
+
+
+
 <script type="text/javascript " src="/scripts/opaapp.js"></script>
 
 

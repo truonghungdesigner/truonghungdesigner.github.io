@@ -29,6 +29,8 @@
                     <li>|</li>
                     <span><i class="fa fa-comment"></i> {{article._author.name}}</span>
                     <li>|</li>
+                    <span><i class="fa fa-comment"></i>{{getCategoryNameOfArticle(article._category._id)}}</span>
+                    <li>|</li>
                     <li>
                         <span class="fa fa-star"></span>
                         <span class="fa fa-star"></span>
@@ -41,9 +43,9 @@
                     <p>
                         {{article.description}}
                     </p>
-                    <p>
-                        {{article.content}}
-                    </p>
+
+                    <p ng-bind-html="article.content" class="blog-content"></p>
+
                     <!-- SOCIAL POST -->
                     <div class="social-post-area">
                         <ul class="mbm_social">
