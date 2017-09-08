@@ -18,300 +18,73 @@
 <div class="news-two-big-images clearfix">
     <div class="container set-padding-content">
         <div ng-init="getArticleBySearchKey()" class="row five-news-style">
-            <div ng-repeat="art in articleGetByKey" class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-                <a href="#" class="hover-images">
-                    <img ng-src="{{article.media}}" class="media-images img-responsive hover-big-images">
-                </a>
-                <h1 class="title-post">{{article.title}}</h1>
-                <ul class="list-inline list-unstyled">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+                <div ng-repeat="art in articleGetByKey">
+                    <a href="#textpost/{{art._id}}" class="hover-images">
+                        <img ng-src="{{art.media}}" class="media-images img-responsive hover-big-images">
+                    </a>
+                    <h1 class="title-post">{{art.title}}</h1>
+                    <ul class="list-inline list-unstyled">
 
-                    <li><span><i class="fa fa-calendar"></i> {{article.createdDate}}} </span></li>
-                    <li>|</li>
-                    <span><i class="fa fa-comment"></i> {{article._author.name}}</span>
-                    <li>|</li>
-                    <span><i class="fa fa-comment"></i>{{getCategoryNameOfArticle(article._category._id)}}</span>
-                    <li>|</li>
-                    <li>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star-half-o"></span>
-                    </li>
-                </ul>
-                <div class="content-post">
-                    <p>
-                        {{article.description}}
-                    </p>
-
-                    <p ng-bind-html="article.content" class="blog-content"></p>
-
-                    <!-- SOCIAL POST -->
-                    <div class="social-post-area">
-                        <ul class="mbm_social">
-                            <li>
-                                <a class="social-facebook" href="#">
-                                    <i class="fa fa-facebook"><small>facebook</small></i>
-
-                                    <div class="tooltip"><span>facebook</span></div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="social-twitter" href="#">
-                                    <i class="fa fa-twitter"><small>Twitter</small></i>
-                                    <div class="tooltip"><span>Twitter</span></div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="social-google-plus" href="#">
-                                    <i class="fa fa-google-plus"><small>google +</small></i>
-                                    <div class="tooltip"><span>google</span></div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="social-linkedin" href="#">
-                                    <i class="fa  fa-linkedin"><small>linkedin</small></i>
-                                    <div class="tooltip"><span>linkedin</span></div>
-                                </a>
-                            </li>
-                        </ul>
+                        <li><span><i class="fa fa-calendar"></i> {{art.createdDate}}} </span></li>
+                        <li>|</li>
+                        <span><i class="fa fa-comment"></i> {{art._author.name}}</span>
+                        <li>|</li>
+                        <span><i class="fa fa-comment"></i>{{getCategoryNameOfArticle(art._category._id)}}</span>
+                        <li>|</li>
+                        <li>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-half-o"></span>
+                        </li>
+                    </ul>
+                    <div class="content-post">
+                        <p>
+                            {{art.description}}
+                        </p>
                     </div>
-
-                    <!-- NEXT AND PREV -->
-                    <div class="row padding-botoom-nex-prev">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <a href=""><i class="fa fa-chevron-left" aria-hidden="true"></i> Bài viết trước</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
-                            <a href="">Bài viết tiếp theo <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <!-- TAC GIA -->
-                    <div class="tac-gia-post">
-                        <div class="row">
-
-                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                <img class="img-responsive" src="images/avatar.jpg" alt="">
-                            </div>
-
-                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                                <h4 class="text-tg">Trương Thanh Hưng</h4>
-                                <p class="web-tg"><a href="http://truongthanhhung.org/" target="_blank">http://truongthanhhung.org/</a></p>
-                                <p class="desc-tg">Blog Project chuyên chia sẻ những kiến thức về thiết kế website (Webdisign) và kiến thức SEO. Blog được thiết kế bởi WD Trương Thanh Hưng với nền tản Bootstrap, HTML, CSS, AngularJS... Chúc bạn lướt web vui vẻ !</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- COMMENT -->
-
-                    <div class="panel panel-white post panel-shadow clearfix">
-                        <div class="post-heading">
-                            <h3>Bình luận bài viết</h3><br/>
-                            <div class="pull-left image">
-                                <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-responsive img-circle avatar" alt="user profile image">
-                            </div>
-                            <div class="pull-left meta">
-                                <div class="title h5">
-                                    <a href="#"><b>Trương Thúy Sơn</b></a> đăng 1 bài.
-                                </div>
-                                <h6 class="text-muted time">1 phút trước</h6>
-                            </div>
-                        </div>
-                        <div class="post-description">
-                            <p>SEO Từ khóa quan trọng phải được đưa lên thẻ title và meta description.</p>
-                            <div class="stats">
-                                <a href="#" class="btn btn-default stat-item">
-                                    <i class="fa fa-thumbs-up icon"></i>2
-                                </a>
-                                <a href="#" class="btn btn-default stat-item">
-                                    <i class="fa fa-share icon"></i>12
-                                </a>
-                            </div>
-                        </div>
-                        <div class="post-footer">
-                            <div class="input-group">
-                                <input class="form-control" placeholder="Add a comment" type="text">
-                                <span class="input-group-addon">
-                                            <a href="#"><i class="fa fa-edit"></i></a>  
-                                        </span>
-                            </div>
-                            <ul class="comments-list">
-                                <li class="comment">
-                                    <a class="pull-left" href="#">
-                                        <img class="avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="img-responsive avatar">
-                                    </a>
-                                    <div class="comment-body">
-                                        <div class="comment-heading">
-                                            <h4 class="user">Trương Gia Bỏ</h4>
-                                            <h5 class="time">5 phút trước</h5>
-                                        </div>
-                                        <p>ohhhhhhhhhhhhhhhhh, phải không bạn ?</p>
-                                    </div>
-                                    <ul class="comments-list">
-                                        <li class="comment">
-                                            <a class="pull-left" href="#">
-                                                <img class="avatar img-responsive" src="http://bootdey.com/img/Content/user_3.jpg" alt="avatar">
-                                            </a>
-                                            <div class="comment-body">
-                                                <div class="comment-heading">
-                                                    <h4 class="user">Trương Quân Bảo</h4>
-                                                    <h5 class="time">3 phút trước</h5>
-                                                </div>
-                                                <p>Hình như là vậy đó anh em</p>
-                                            </div>
-                                        </li>
-                                        <li class="comment">
-                                            <a class="pull-left" href="#">
-                                                <img class="avatar img-responsive" src="http://bootdey.com/img/Content/user_2.jpg" alt="avatar">
-                                            </a>
-                                            <div class="comment-body">
-                                                <div class="comment-heading">
-                                                    <h4 class="user">Trương Gia Hân</h4>
-                                                    <h5 class="time">3 phút trước</h5>
-                                                </div>
-                                                <p>Ok, hay quá mấy a ơi.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- END COMMENT -->
-                    <!-- start:form comment -->
-                    <div class="form-comment">
-                        <h3>Bình luận</h3>
-                        <form role="form">
-                            <div class="row">
-                                <div class="form-group col-md-4">
-                                    <input class="form-control input-lg" placeholder="Tên..">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <input class="form-control input-lg" placeholder="Email..">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <input class="form-control input-lg" placeholder="Facebook..">
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <textarea class="form-control" rows="10" placeholder="Bình luận của bạn là..."></textarea>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <button class="btn btn-lg btn-default btn-block">Gửi Bình Luận</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- end:form comment -->
-
-
                 </div>
+                <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" max-size="maxSize" class="pagination-sm" items-per-page="itemsPerPage" boundary-links="true" force-ellipses="true"></ul>
             </div>
             <!-- SIDEBAR-AREA -->
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sibar-area">
-                <div class="avatar-area hover-images">
-                    <img class="img-responsive style-avatar zhang-hover" src="images/avatar.jpg" alt="avatar-truong-thanh-hung" title="Trương Thanh Hưng Blog Project">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sibar-area clearfix ">
+                <div class="avatar-area hover-images ">
+                    <img class="img-responsive style-avatar zhang-hover " src="images/avatar.jpg " alt="avatar-truong-thanh-hung " title="Trương Thanh Hưng Blog Project ">
                     <h3>Trương Thanh Hưng Blog</h3>
                     <p><strong>Blog Project</strong> chuyên chia sẻ những kiến thức về thiết kế website (Webdisign) và kiến thức SEO. Blog được thiết kế bởi <strong>Newbie Trương Thanh Hưng</strong> với nền tản Bootstrap, HTML, CSS, AngularJS... Chúc bạn
                         lướt web vui vẻ ! </p>
                 </div>
 
-                <div class="fb-page" data-href="https://www.facebook.com/karateseo/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                    <blockquote cite="https://www.facebook.com/karateseo/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/karateseo/">SEO Chanel</a></blockquote>
+                <div class="fb-page " data-href="https://www.facebook.com/karateseo/ " data-small-header="false " data-adapt-container-width="true " data-hide-cover="false " data-show-facepile="true ">
+                    <blockquote cite="https://www.facebook.com/karateseo/ " class="fb-xfbml-parse-ignore "><a href="https://www.facebook.com/karateseo/ ">SEO Chanel</a></blockquote>
                 </div>
-                <h4 class="style-text-latest-articel-video">Video SEO Free</h4>
-                <iframe width="560" height="515" class="img-responsive" src="https://www.youtube.com/embed/videoseries?list=PLNCySEbPac1XNTIrBR-DsjVYj6vSNK0LV" frameborder="0" allowfullscreen></iframe>
-                <h4 class="style-text-latest-articel">Bài viết mới nhất</h4>
-                <div class="latest-articel-area">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="row news-small-wedisign">
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    <a href="#">
-                                        <img class="img-responsive" src="https://via.placeholder.com/98x90" alt="">
+                <h4 class="style-text-latest-articel-video ">Video SEO Free</h4>
+                <iframe width="560 " height="515 " class="img-responsive " src="https://www.youtube.com/embed/videoseries?list=PLNCySEbPac1XNTIrBR-DsjVYj6vSNK0LV " frameborder="0 " allowfullscreen></iframe>
+                <h4 class="style-text-latest-articel ">Bài viết mới nhất</h4>
+                <div class="latest-articel-area ">
+                    <div class="row ">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                            <div ng-repeat="post in popularArticles " class="row news-small-wedisign ">
+
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+                                    <a href="#textpost/{{post._id}} ">
+                                        <img class="img-responsive thumb-05 " ng-src="{{post.media}} " alt=" ">
                                     </a>
                                 </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                    <a href="#">
-                                        <h3 class="margin-top-small-post">Sự khác biệt giữa 'triumph' và 'victory'</h3>
+                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 ">
+                                    <a href="#textpost/{{post._id}} ">
+                                        <h3 class="margin-top-small-post ">{{post.title}}</h3>
                                     </a>
-                                    <span>Tháng 7, Ngày 23 2017</span>
+                                    <span>Ngày đăng: {{post.createdDate | date: 'dd-MM-yyyy HH:mm:ss'}}</span>
                                 </div>
+
                             </div>
-                            <div class="row news-small-wedisign">
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    <a href="#">
-                                        <img class="img-responsive" src="https://via.placeholder.com/98x90" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                    <a href="#">
-                                        <h3 class="margin-top-small-post">'Chúa đảo' Tuần Châu dừng dự án thay thế chợ hoá chất Kim Biên</h3>
-                                    </a>
-                                    <span>Tháng 7, Ngày 23 2017</span>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="row news-small-wedisign">
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    <a href="#">
-                                        <img class="img-responsive" src="https://via.placeholder.com/98x90" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                    <a href="#">
-                                        <h3 class="margin-top-small-post">Sự khác biệt giữa 'triumph' và 'victory'</h3>
-                                    </a>
-                                    <span>Tháng 7, Ngày 23 2017</span>
-                                </div>
-                            </div>
-                            <div class="row news-small-wedisign">
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    <a href="#">
-                                        <img class="img-responsive" src="https://via.placeholder.com/98x90" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                    <a href="#">
-                                        <h3 class="margin-top-small-post">'Chúa đảo' Tuần Châu dừng dự án thay thế chợ hoá chất Kim Biên</h3>
-                                    </a>
-                                    <span>Tháng 7, Ngày 23 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="row news-small-wedisign">
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    <a href="#">
-                                        <img class="img-responsive" src="https://via.placeholder.com/98x90" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                    <a href="#">
-                                        <h3 class="margin-top-small-post">Sự khác biệt giữa 'triumph' và 'victory'</h3>
-                                    </a>
-                                    <span>Tháng 7, Ngày 23 2017</span>
-                                </div>
-                            </div>
-                            <div class="row news-small-wedisign">
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    <a href="#">
-                                        <img class="img-responsive" src="https://via.placeholder.com/98x90" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                    <a href="#">
-                                        <h3 class="margin-top-small-post">'Chúa đảo' Tuần Châu dừng dự án thay thế chợ hoá chất Kim Biên</h3>
-                                    </a>
-                                    <span>Tháng 7, Ngày 23 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

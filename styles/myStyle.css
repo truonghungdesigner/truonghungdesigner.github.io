@@ -298,7 +298,7 @@
 
 .dec-post-n01 p {
     margin: 0 0 5px;
-    font-size: 15px;
+    font-size: 15px!important;
     color: #666;
 }
 
@@ -1042,6 +1042,7 @@ footer {
     height: auto;
 }
 
+
 /* center crop images TOP center */
 
 .thumb-top-center-crop {
@@ -1064,12 +1065,13 @@ footer {
     height: auto;
 }
 
+
 /* center crop images right center */
 
 .thumb-right-center-crop {
     position: relative;
-    width: 170px;
-    height: 124px;
+    width: 180px;
+    height: 126px;
     overflow: hidden;
 }
 

@@ -95,6 +95,7 @@ Cú pháp:
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
+    padding-bottom: 10px;
 }
 
 .hover-images:hover .zhang-hover {

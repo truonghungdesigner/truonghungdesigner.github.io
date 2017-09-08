@@ -2,7 +2,7 @@
     <div class="overlay">
         <div class="container">
             <div class="box-register">
-                <form>
+                <form ng-submit="summitSignup()">
                     <div class="text-center">
                         <h3>Đăng Ký Tài Khoản Mới</h3>
                         <small>Đã Đăng ký? Nhấp vào <a href="login.html">Đăng nhập</a> để đăng nhập tài khoản của bạn.</small>
@@ -10,24 +10,24 @@
                     <hr>
                     <div class="form-group">
                         <label>Họ</label>
-                        <input type="text" class="form-control" placeholder="Họ của bạn">
+                        <input ng-model="signUpUser.firstname" type="text" class="form-control" placeholder="Họ của bạn">
                     </div>
                     <div class="form-group">
                         <label>Tên</label>
-                        <input type="text" class="form-control" placeholder="Tên của bạn">
+                        <input ng-model="signUpUser.lastname" type="text" class="form-control" placeholder="Tên của bạn">
                     </div>
                     <div class="form-group">
                         <label>Email thường dùng</label>
-                        <input type="email" class="form-control" placeholder="Email thường dùng">
+                        <input ng-model="signUpUser.email" type="email" class="form-control" placeholder="Email thường dùng">
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label>Mật khẩu</label>
-                            <input class="form-control" type="password" placeholder="Mật khẩu">
+                            <input ng-model="signUpUser.password" class="form-control" type="password" placeholder="Mật khẩu">
                         </div>
                         <div class="col-md-6">
-                            <label>Xác minh lại mật khẩu</label>
-                            <input class="form-control" type="password" placeholder="Xác minh lại mật khẩu">
+                            <label for="reenterpassword">Xác minh lại mật khẩu</label>
+                            <input id="reenterpassword" class="form-control" type="password" placeholder="Xác minh lại mật khẩu">
                         </div>
                     </div>
                     <hr>

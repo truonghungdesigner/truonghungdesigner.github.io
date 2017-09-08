@@ -7,7 +7,7 @@
             </div>
             <div class="col-xs-9 col-sm-10 col-md-11 col-lg-11 style-hot-news-five">
                 <marquee>
-                    <a ng-repeat="x in allNewArticles.slice(0,4)">{{x.title}} >> </a>
+                    <a href="#textpost/{{x._id}}" ng-repeat="x in allNewArticles.slice(0,4)">{{x.title}} >> </a>
                 </marquee>
             </div>
         </div>
@@ -19,7 +19,7 @@
     <div class="container set-padding-content">
         <div ng-repeat="post in popularArticlesOne" class="row five-news-style">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-                <a href="#" class="hover-images">
+                <a href="#textpost/{{post._id}}" class="hover-images">
                     <img ng-src="{{post.media}}" class="portrait thumb-top-center-crop">
                 </a>
 
@@ -28,10 +28,10 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="dec-post-n01">
-                            <a href="#">
+                            <a href="#textpost/{{post._id}}">
                                 <h2 class="title-post-h2 margin-top-post01 text-3 Utimes-font">{{post.title}}</h2>
                             </a>
-                            <p class="line-desc text-3 Tahoma-font">{{post.content}}</p>
+                            <p ng-bind-html="post.description" class="line-desc text-3 Tahoma-font"></p>
                         </div>
                         <hr/>
                     </div>
@@ -42,13 +42,13 @@
                         <div ng-repeat="post in randomArticles" class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <div class="post-n02">
-                                    <a href="#" class="hover-images">
+                                    <a href="#textpost/{{post._id}}" class="hover-images">
                                         <img class="img-responsive media-images zhang-hover thumb-02 thumb-right-center-crop" ng-src="{{post.media}}" alt="tilte-post-01">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a href="#">
+                                <a href="#textpost/{{post._id}}">
                                     <h4 class="title-post-h4 text-3 Utimes-font">{{post.title}}</h4>
                                 </a>
                             </div>
@@ -62,7 +62,7 @@
 </div>
 <!-- END OF FIVE NEWS HOT BIG IMAGES -->
 
-<!-- START WEBDESIGN NEWS -->
+<!-- START THOI SU NEWS -->
 <div class="container-content-news">
     <div class="container reset-padding-post-webdesign">
         <div class="row">
@@ -73,18 +73,18 @@
                     </div>
                     <div class="panel-body panel-body-html">
                         <div class="tab-content">
-                            <!-- TAB WEBDESIGN DEFAULT -->
+                            <!-- TAB THOI SU DEFAULT -->
                             <div class="tab-pane active" id="webdesign-default">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-post-webdesign">
                                         <div class="row">
-                                            <div ng-repeat="x in Articles.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 main-post-html">
+                                            <div ng-repeat="x in articlesInCat2.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 main-post-html">
                                                 <a href="#textpost/{{x._id}}" class="hover-images">
                                                     <img ng-src="{{x.media}}" class="img-responsive zhang-hover thumb-04 thumb-center-crop">
                                                     <h2>{{x.title}}</h2>
                                                 </a>
                                                 <span>{{x._author.name}}, {{x.updatedDate}}</span>
-                                                <p class="line-desc">{{x.content}}</p>
+                                                <p ng-bind-html="x.description" class="line-desc"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -92,35 +92,35 @@
                             </div>
                         </div>
                     </div>
-                    <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" max-size="maxSize" class="pagination-sm" items-per-page="itemsPerPage" boundary-links="true" force-ellipses="true"></ul>
+                    <!-- <ul uib-pagination total-items="totalItemsCategory2" ng-model="currentPage" ng-change="pageChanged()" max-size="maxSize" class="pagination-sm" items-per-page="itemsPerPage" boundary-links="true" force-ellipses="true"></ul> -->
                 </div>
 
                 <div class="panel panel-primary panel-post-webdesign-area">
                     <div class="panel-heading style-panel-heading">
-                        <h3 class="panel-title style-panel-title-webdesign">GIẢI TRÍ</h3>
+                        <h3 class="panel-title style-panel-title-webdesign">THỂ THAO</h3>
                     </div>
                     <div class="panel-body panel-body-html">
                         <div class="tab-content">
-                            <!-- TAB WEBDESIGN DEFAULT -->
+                            <!-- TAB THOI SU DEFAULT -->
                             <div class="tab-pane active" id="webdesign-default">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-post-webdesign">
                                         <div class="row">
-                                            <div ng-repeat="x in Articles" class=" col-xs-12 col-sm-12 col-md-6 col-lg-6 main-post-html ">
-                                                <a href="#textpost/{{x._id}} " class="hover-images ">
-                                                    <img ng-src="{{x.media}} " class="img-responsive zhang-hover thumb-04 thumb-center-crop ">
+                                            <div ng-repeat="x in articlesInCat3.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 main-post-html">
+                                                <a href="#textpost/{{x._id}}" class="hover-images">
+                                                    <img ng-src="{{x.media}}" class="img-responsive zhang-hover thumb-04 thumb-center-crop">
                                                     <h2>{{x.title}}</h2>
                                                 </a>
                                                 <span>{{x._author.name}}, {{x.updatedDate}}</span>
-                                                <p class="line-desc ">{{x.content}}</p>
+                                                <p ng-bind-html="x.description" class="line-desc"></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- <ul uib-pagination total-items="totalItems " ng-model="currentPage1 " ng-change="pageChanged1() " max-size="maxSize1 " class="pagination-sm " items-per-page="itemsPerPage1 " boundary-links="true " force-ellipses="true "></ul> -->
                     </div>
+                    <!-- <ul uib-pagination total-items="totalItemsCategory3" ng-model="currentPage" ng-change="pageChanged()" max-size="maxSize" class="pagination-sm" items-per-page="itemsPerPage" boundary-links="true" force-ellipses="true"></ul> -->
                 </div>
             </div>
 
@@ -145,12 +145,12 @@
                             <div ng-repeat="post in popularArticles " class="row news-small-wedisign ">
 
                                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
-                                    <a href="# ">
+                                    <a href="#textpost/{{post._id}} ">
                                         <img class="img-responsive thumb-05 " ng-src="{{post.media}} " alt=" ">
                                     </a>
                                 </div>
                                 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 ">
-                                    <a href="# ">
+                                    <a href="#textpost/{{post._id}} ">
                                         <h3 class="margin-top-small-post ">{{post.title}}</h3>
                                     </a>
                                     <span>Ngày đăng: {{post.createdDate | date: 'dd-MM-yyyy HH:mm:ss'}}</span>
@@ -169,7 +169,7 @@
 <div class="container ">
     <div class="row padding-bottom-ads ">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-style ">
-            <a href="# "><img src="images/banner-ads.gif " alt="ads-qc " class="box-shadow-ads img-responsive text-center-ads-bottom "></a>
+            <a href="#textpost/{{post._id}} "><img src="images/banner-ads.gif " alt="ads-qc " class="box-shadow-ads img-responsive text-center-ads-bottom "></a>
         </div>
     </div>
 </div>
