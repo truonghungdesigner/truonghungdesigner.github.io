@@ -192,31 +192,7 @@ scotchApp.controller('mainController', function($scope, $http, $routeParams, $lo
         });
     }
 
-    /** 
-        $scope.submitCreateArticle = function() {
-            console.log($scope.newArticle);
-            $scope.newArticle._author = "5981d84fb38ced0004f0c5df";
-            $http.post(root + '/api/articles/', $scope.newArticle)
-                .then(function successCallbak(response) {
-                    alert("Thành công");
-                }, function errorCallback(response) {
-                    // console.log(data, status, headers, config);
-                });
-        };**/
-    /** 
-        $scope.submitCreateArticle = function() {
 
-            $scope.newArticle._author = "5978a69ade96e7000418148d";
-            console.log($scope.newArticle);
-            $http.post(root + '/api/articles/', $scope.newArticle)
-                .success(function(response) {
-                    alert("Thành công")
-                }).error(function(data, status, headers, config) {
-                    console.log(data, status, headers, config);
-                });;
-        };
-
-    **/
 
     $scope.getArticle = function() {
         var id = $routeParams.id;

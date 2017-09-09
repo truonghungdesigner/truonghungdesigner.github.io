@@ -2,14 +2,14 @@
 <div ng-init="getArticle()" class="breadcrumb-area clearfix">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-col-breadcrumb">
+            <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-col-breadcrumb">
                 <ol class="breadcrumb style-breadcrumb">
                     <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="#">SEO</a></li>
                     <li><a href="#">SEO Onpage</a></li>
                     <li><a href="#" class="active">Cách viết bài chuẩn SEO lên TOP Google trong 1 phút 30 giây</a></li>
                 </ol>
-            </div>
+            </div> -->
         </div>
         <!-- END OF NEWS HOT -->
     </div>
@@ -25,11 +25,11 @@
                 <h1 class="title-post">{{article.title}}</h1>
                 <ul class="list-inline list-unstyled">
 
-                    <li><span><i class="fa fa-calendar"></i> {{article.createdDate}} </span></li>
+                    <li><span><i class="fa fa-calendar"></i> {{article.createdDate | date: 'dd-MM-yyyy HH:mm:ss'}} </span></li>
                     <li>|</li>
                     <span><i class="fa fa-user-circle"></i> {{article._author.name}}</span>
-                    <li>|</li>
-                    <span><i class="fa fa-comment"></i>{{getCategoryNameOfArticle(article._category._id)}}</span>
+                    <!-- <li>|</li> -->
+                    <!-- <span><i class="fa fa-comment"></i>{{getCategoryNameOfArticle(article._category._id)}}</span> -->
                     <li>|</li>
                     <li>
                         <span class="fa fa-star"></span>
@@ -126,7 +126,7 @@
                     <!-- start:form comment -->
                     <div class="form-comment">
                         <h3>Bình luận</h3>
-                        <form role="form">
+                        <form ng-submit="addCommentforArticle()" role="form">
                             <div class="row">
                                 <div class="form-group col-md-4">
                                     <input class="form-control input-lg" placeholder="Tên..">
@@ -138,10 +138,10 @@
                                     <input class="form-control input-lg" placeholder="Facebook..">
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <textarea class="form-control" rows="10" placeholder="Bình luận của bạn là..."></textarea>
+                                    <textarea ng-model="newComment.commentContent" class="form-control" rows="10" placeholder="Bình luận của bạn là..."></textarea>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <button class="btn btn-lg btn-default btn-block">Gửi Bình Luận</button>
+                                    <button type="submit" class="btn btn-lg btn-default btn-block">Gửi Bình Luận</button>
                                 </div>
                             </div>
                         </form>
